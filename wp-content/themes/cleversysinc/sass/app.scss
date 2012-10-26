@@ -2,7 +2,7 @@
 @import "settings";
 
 // Comment out this import if you are customizing you imports below
-//@import "foundation";
+@import "foundation";
 
 // ----------------------------------------
 // Import specific parts of Foundation by commenting the import "foundation"
@@ -36,12 +36,12 @@
 
 // Control which components you get if customizing
 
- @import "foundation/components/modules/buttons";
+@import "foundation/components/modules/buttons";
 @import "foundation/components/modules/tabs";
- @import "foundation/components/modules/ui";
+@import "foundation/components/modules/ui";
 // @import "foundation/components/modules/navbar";
- @import "foundation/components/modules/orbit";
- @import "foundation/components/modules/reveal";
+@import "foundation/components/modules/orbit";
+@import "foundation/components/modules/reveal";
 // @import "foundation/components/modules/offcanvas";
 
 $blue:#426289;
