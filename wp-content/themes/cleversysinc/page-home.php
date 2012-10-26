@@ -53,9 +53,7 @@ Template Name: Home Page
 					           bulletThumbLocation: '',		 // location from this file where thumbs will be
 					           fluid: '16x6' });
 					   });
-					  $(document).ready(function() {
-						   $(document).foundationTabs();
-					  });
+				
 					  
 					</script>
 				
@@ -150,7 +148,7 @@ Template Name: Home Page
 			$module .= "</ul></div></div>	";
 			echo $module;
 			?>	
-			<div id="news" class="row container">
+			<div id="news" class="row">
 				<h4 class="column twelve" >Recent News</h4>
 			<?php 
 			$args = array(

@@ -41,8 +41,9 @@
 		<!-- wordpress head functions -->
 		<?php wp_head(); ?>
 		<!-- end of wordpress head -->
-
 		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+		<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/javascripts/foundation/jquery.foundation.accordion.js"></script>
+
 
 		
 		<!-- bring in theme options styles -->
@@ -177,8 +178,9 @@
 							$linkList = "";
 							foreach($links as $link){
 							
-								$linkList .='<li class="column three"><a href="'.$link->guid.'">'.$link->post_title.'</a></li>';
+								$linkList .='<li class="column three"><a href="/?'.$link->post_type.'='.$link->post_name.'#blank">'.$link->post_title.'</a></li>';
 								
+
 								
 							}
 							
@@ -198,6 +200,7 @@
 		</dl>
 	</div>
 </div>
-		<div class="row container">
+<div class="row" style="overflow:visible;">
 		<div class="logo"><h1>Cleversys Inc</h1><cite>behavior recognition technology of the next generation</cite></div>
+</div>
 		
