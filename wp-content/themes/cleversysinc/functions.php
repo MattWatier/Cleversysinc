@@ -115,6 +115,12 @@ if(function_exists("register_field_group"))
 		'menu_order' => 0,
 	));
 }
+
+
+require_once('library/custom_taxonomy_templates.php'); //adds in custom taxonomy templates
+
+
+
 /*
 Author: Eddie Machado
 URL: htp://themble.com/bones/

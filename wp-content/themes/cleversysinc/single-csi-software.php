@@ -1,23 +1,41 @@
 <?php
-/* Single-csi_products.php   */
+/* Software Package
+
+  Software Screen Shots
+  Title
+  Content
+  Documents
+  Detectable Behaviors
+  Cite
+  Applications
+  Unique Capablities
+  Results
+  Requirements
+  Associated Hardware
+
+
+   */
 ?>
 
 <?php get_header(); ?>
 			
 			<div class="clearfix row csi-products">
-			
-				<div class="main clearfix" role="main">
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
-						<header>
-							<h1><?php the_title(); ?></h1>
-						</header> <!-- end article header -->
+					
+          <header class="csi-product column twelve"><h1 class="column"><?php the_title(); ?></h1></header>
+          <div class="main clearfix" role="main">
+          
+          
+          <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
+
 
 						<section class="post_content clearfix">
-                            <div class="row">
-                                <h5>Screen Grabs</h5>
-                                <? $field = get_field("screen_grabs");print_r($field); ?>
-                            </div>
+               <div class="row">
+                  <? $field = get_field("image");
+                    $item = '<img src="'.$field["sizes"]["wpf-featured"].'" alt="'.$field["caption"].'">';
+                    echo $item;
+                   ?>
+              </div>
 							<?php the_content(); ?>
                            
 						</section> <!-- end article section -->
@@ -112,12 +130,7 @@
 					</article>
 					
 					<?php endif; ?>
-			   <script>
-                $(document).ready(function() {
-              $(document).foundationTabs();
-                          $(document).foundationAccordion();
-            });
-        </script>
+
 
 
 

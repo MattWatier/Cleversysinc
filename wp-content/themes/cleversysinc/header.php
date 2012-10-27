@@ -43,6 +43,7 @@
 		<!-- end of wordpress head -->
 		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 		<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/javascripts/foundation/jquery.foundation.accordion.js"></script>
+	
 
 
 		

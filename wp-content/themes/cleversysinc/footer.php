@@ -15,11 +15,9 @@
 					</div>
 					
 </footer> <!-- end footer -->
-		<script>
+	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/javascripts/foundation/jquery.foundation.clearing.js"></script>
 
-		$(document).foundationAccordion();
-             
-        </script>
+	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/javascripts/foundation/app.js"></script>
 
 		
 		<!--[if lt IE 7 ]>
