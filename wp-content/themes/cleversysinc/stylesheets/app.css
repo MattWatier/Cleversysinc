@@ -112,7 +112,7 @@ figure {
 }
 
 /* line 51, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.2.0/scss/foundation/mixins/_semantic-grid.scss */
-.csi-products .main, .csi-products .main article header, .csi-products .main article section, .csi-products .sidebar {
+.page .main, .page .sidebar, .contact .main, .contact .main form, .contact .sidebar, .csi-products .main, .csi-products .main article header, .csi-products .main article section, .csi-products .sidebar {
   float: left;
 }
 
@@ -122,28 +122,28 @@ figure {
 }
 
 /* line 55, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.2.0/scss/foundation/mixins/_semantic-grid.scss */
-.csi-products .main article, .csi-products .sidebar .behaviors ul {
+.page .main article, .contact .main article, .csi-products .main article, .csi-products .sidebar .behaviors ul {
   *zoom: 1;
 }
 /* line 4, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.2.0/scss/foundation/mixins/_clearfix.scss */
-.csi-products .main article:before, .csi-products .sidebar .behaviors ul:before, .csi-products .main article:after, .csi-products .sidebar .behaviors ul:after {
+.page .main article:before, .contact .main article:before, .csi-products .main article:before, .csi-products .sidebar .behaviors ul:before, .page .main article:after, .contact .main article:after, .csi-products .main article:after, .csi-products .sidebar .behaviors ul:after {
   content: "";
   display: table;
 }
 /* line 5, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.2.0/scss/foundation/mixins/_clearfix.scss */
-.csi-products .main article:after, .csi-products .sidebar .behaviors ul:after {
+.page .main article:after, .contact .main article:after, .csi-products .main article:after, .csi-products .sidebar .behaviors ul:after {
   clear: both;
 }
 
 /* line 59, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.2.0/scss/foundation/mixins/_semantic-grid.scss */
-.csi-products .main article, .csi-products .sidebar .behaviors ul {
+.page .main article, .contact .main article, .csi-products .main article, .csi-products .sidebar .behaviors ul {
   width: auto;
   max-width: none;
   min-width: 0;
 }
 
 /* line 62, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.2.0/scss/foundation/mixins/_semantic-grid.scss */
-.csi-products .main, .csi-products .main article header, .csi-products .main article section, .csi-products .sidebar, .csi-products .sidebar .behaviors ul li {
+.page .main, .page .sidebar, .contact .main, .contact .main form, .contact .sidebar, .csi-products .main, .csi-products .main article header, .csi-products .main article section, .csi-products .sidebar, .csi-products .sidebar .behaviors ul li {
   position: relative;
   min-height: 1px;
   padding: 0 15px;
@@ -4090,107 +4090,157 @@ div.logo {
 
 /* line 233, ../sass/app.scss */
 footer {
+  padding: 1em;
   background-color: #426289;
   margin-top: 1em;
 }
-/* line 235, ../sass/app.scss */
+/* line 237, ../sass/app.scss */
 footer ul {
   margin: 15px;
   list-style: none;
-}
-/* line 237, ../sass/app.scss */
-footer ul li {
-  float: left;
-  padding: 0 1.25em;
 }
 /* line 239, ../sass/app.scss */
 footer ul li a {
   color: white;
 }
-/* line 240, ../sass/app.scss */
-footer ul li + li {
-  border-left: 1px white solid;
+/* line 242, ../sass/app.scss */
+footer h5 {
+  color: white;
+  border-bottom: 1px solid #d6dfeb;
+  padding-bottom: .25em;
+  font-weight: 900;
+}
+/* line 248, ../sass/app.scss */
+footer .panel.callout {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #5980af;
+  border: #354e6e;
+  height: 185px;
+}
+/* line 249, ../sass/app.scss */
+footer .panel.callout h5 {
+  border-bottom: 1px solid #d6dfeb;
+  padding-bottom: .25em;
+  font-weight: 900;
+}
+/* line 259, ../sass/app.scss */
+footer .panel.callout .button-bar .button {
+  margin: .25em;
 }
 
-/* line 245, ../sass/app.scss */
+/* line 265, ../sass/app.scss */
+.page .main {
+  width: 66.66667%;
+}
+/* line 267, ../sass/app.scss */
+.page .main article {
+  margin: 0;
+}
+/* line 271, ../sass/app.scss */
+.page .sidebar {
+  width: 33.33333%;
+}
+
+/* line 276, ../sass/app.scss */
+.contact .main {
+  width: 50%;
+}
+/* line 278, ../sass/app.scss */
+.contact .main form {
+  width: 100%;
+}
+/* line 281, ../sass/app.scss */
+.contact .main article {
+  margin: 0;
+}
+/* line 285, ../sass/app.scss */
+.contact .sidebar {
+  width: 50%;
+}
+
+/* line 291, ../sass/app.scss */
 .csi-products .main {
   width: 66.66667%;
 }
-/* line 247, ../sass/app.scss */
+/* line 293, ../sass/app.scss */
 .csi-products .main article {
   margin: 0;
 }
-/* line 249, ../sass/app.scss */
+/* line 295, ../sass/app.scss */
 .csi-products .main article header {
   width: 100%;
 }
-/* line 250, ../sass/app.scss */
+/* line 296, ../sass/app.scss */
 .csi-products .main article section {
   width: 100%;
 }
-/* line 256, ../sass/app.scss */
+/* line 302, ../sass/app.scss */
 .csi-products .sidebar {
   width: 33.33333%;
 }
-/* line 259, ../sass/app.scss */
+/* line 305, ../sass/app.scss */
 .csi-products .sidebar .behaviors h5 {
   font-size: 1em;
   font-weight: 900;
   color: #426289;
 }
-/* line 262, ../sass/app.scss */
+/* line 308, ../sass/app.scss */
 .csi-products .sidebar .behaviors ul {
   margin: 0 -15px;
   list-style: none;
 }
-/* line 266, ../sass/app.scss */
+/* line 312, ../sass/app.scss */
 .csi-products .sidebar .behaviors ul li {
   margin: 0 auto !important;
   width: 33.33333%;
   float: right;
 }
-/* line 276, ../sass/app.scss */
+/* line 322, ../sass/app.scss */
 .csi-products .sidebar .accordion h6 {
   font-size: .95em;
   font-weight: 900;
   color: grey;
 }
-/* line 280, ../sass/app.scss */
+/* line 326, ../sass/app.scss */
 .csi-products .sidebar .accordion ul {
   list-style-type: disc;
   font-size: .9em;
 }
-/* line 286, ../sass/app.scss */
+/* line 332, ../sass/app.scss */
 .csi-products .sidebar h5, .csi-products .sidebar .title {
   font-size: 1em;
   font-weight: 900;
   color: #426289;
 }
-/* line 289, ../sass/app.scss */
+/* line 335, ../sass/app.scss */
 .csi-products .sidebar ul {
   list-style: none;
   font-size: .9em;
 }
-/* line 293, ../sass/app.scss */
+/* line 339, ../sass/app.scss */
 .csi-products .sidebar ul li {
   line-height: 1.4em;
   margin-bottom: .7em;
 }
-/* line 300, ../sass/app.scss */
+/* line 346, ../sass/app.scss */
 .csi-products table.dimensions {
   border: 1px solid #e0e0e0;
   width: 100%;
 }
-/* line 303, ../sass/app.scss */
+/* line 349, ../sass/app.scss */
 .csi-products table.dimensions thead {
   background-color: #83a0c3;
   font-weight: 900;
 }
-/* line 304, ../sass/app.scss */
+/* line 350, ../sass/app.scss */
 .csi-products table.dimensions thead td {
   padding: .5em;
 }
-/* line 308, ../sass/app.scss */
+/* line 354, ../sass/app.scss */
 .csi-products table.dimensions .odd {
   background-color: #ececec;
 }

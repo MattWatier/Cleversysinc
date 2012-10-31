@@ -230,15 +230,61 @@ div.logo{
         }
      }
 }
-footer{background-color:$blue;
-margin-top:1em;
-ul{margin:15px;
+footer{
+  padding: 1em;
+  background-color:$blue;
+  margin-top:1em;
+  ul{margin:15px;
   list-style:none;
-  li{float:left;
-  padding:0 1.25em;
-    a{color:white;}}
-  li + li{border-left: 1px white solid;}
+  li{    a{color:white;}}
+ 
   }
+  h5{
+    color: white;
+    border-bottom: 1px solid scale-color($blue, $lightness: 80%);
+    padding-bottom: .25em;
+    font-weight: 900;
+  }
+ .panel.callout{
+  h5{
+    border-bottom: 1px solid scale-color($blue, $lightness: 80%);
+    padding-bottom: .25em;
+    font-weight: 900;
+  }
+  @include border-radius(5px);
+  background-color:  scale-color($blue, $lightness: 20%);
+  border: scale-color($blue, $lightness:-20%);
+   height: 185px;
+  .button-bar{
+    .button{margin: .25em;}
+  }
+ }
+
+}
+.page{
+  .main{
+        @include column(8);
+        article{
+            @include innerRow(collapse);  
+        }
+    }
+  .sidebar{
+        @include column(4);
+       }
+}
+.contact{
+   .main{
+        @include column(6);
+        form{
+            @include column(12);
+        }
+        article{
+            @include innerRow(collapse);  
+        }
+    }
+  .sidebar{
+        @include column(6);
+       }
 
 }
 .csi-products{
