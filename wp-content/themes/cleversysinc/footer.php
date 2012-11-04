@@ -31,8 +31,7 @@
 
 	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/javascripts/foundation/app.js"></script>
 
-	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/javascripts/foundation/masonry.min.js"></script>
-
+	
 		
 		<!--[if lt IE 7 ]>
   			<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>

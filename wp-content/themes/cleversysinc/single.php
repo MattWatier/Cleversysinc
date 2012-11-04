@@ -6,7 +6,7 @@
 					  <header class=" row column twelve"><h1 class="column"><?php the_title(); ?></h1></header>
           
 
-					<div class="main">
+					<div class="main" >
 
 					<article id="post-<?php the_ID(); ?>"  role="article">
 						<section class="post_content clearfix" itemprop="articleBody">

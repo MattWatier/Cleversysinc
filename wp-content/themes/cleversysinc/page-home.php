@@ -28,8 +28,7 @@ Template Name: Home Page
 						$renderItem .= '</div>';
 					endforeach;
 				$renderItem .= '</div></div></div></div></div><!-- End of Rotation -->	';
-				$renderItem .= '<div id="home-main" class="row">';
-				$renderItem .= '<div class="columns six"><p>'.get_the_content().'</p></div>';
+				
 				echo $renderItem;
 				endwhile; endif; ?>
 			<!-- End of Carousal Wrapper -->
@@ -56,17 +55,37 @@ Template Name: Home Page
 				
 					  
 					</script>
-				
+					<!-- End of Carosel -->
+
+			<div id="home-main" class="row">
+			<div class="main">
+				<p><?  the_content(); ?></p>
+			</div>	
 			
-			<aside class="columns six">
+			<aside class="sidebar">
 		
-			<div id="search" class="">
-				<div class="panel">
+			
+			
+			<?php
+				include 'block-contact.php';
+				include 'block-advert.php';
+			
+				
+				//get_template_part( 'content', 'advert_block' ); 
+			 ?>
+			
+			</aside>
+			</div>
+				<!-- End of Home Main -->
+			<div id="search" class="row">
+				<div class="panel twelve row">
+					<div class="main ">
 					<h3>Behavioral Tasks:</h3> 
 					<p>Search for software programs and hardware apparatuses for a particular behavioral task.</p>
-					<div class="drop">
-						<form action="../cgi-bin/redirect.pl" method="POST" onsubmit="return dropdown(this.gourl)">
-							<select name="gourl" class="columns ten">
+					</div>
+					<div class="drop sidebar ">
+						<form action="../cgi-bin/redirect.pl" method="POST" onsubmit="return dropdown(this.gourl)" class="row">
+							<select name="gourl" class="columns seven">
 								<option value="">Choose:
 								</option><option value="products/behavioral-tasks/home-cage-monitoring">Home Cage Monitoring
 								</option><option value="products/behavioral-tasks/morris-water-maze">Morris Water Maze
@@ -109,35 +128,21 @@ Template Name: Home Page
 								</option><option value="products/behavioral-tasks/porsolts-forced-swim">Porsolt's Forced Swim
 
 							</option></select>
-							<input type="SUBMIT" value="Go" class="button small">
+							<input type="SUBMIT" value="Search" class="button small four offset-by-one">
 						</form>
 					</div>
-				</div>
+				</div>	
+			
 			</div> 
-			<!-- End of row-->
+			<br>
+			<!-- End of Search-->
+
 			
-			<div id="advert" class="hide-for-small">
-				<div class="panel callout radius">
-					<h3>Advert</h3>
-					<h5 class="subheader">sub call to action</h5>
-				</div>
-			</div>
-			<div id="support" class="">
-				<div class="panel callout radius">
-					<h3>Need Help?</h3>
-					<h5 class="subheader">Contact Our Help Desk!</h5>
-					<p>By Phone: <span class="phone">555-555-5555</span> or Online: <a href="mailTo:support@cleversysinc.com">Click Here</a></p>
-				</div>
-			</div>
-			
-			</aside>
-			</div>
-				<!-- End of Home Main -->
 			<? 
 			$args = array('taxonomy' => 'custom_product_cat' );  
 			$custom_cat =  get_categories( $args );
 		
-			$module ="<div id='product-buckets'><div class='row'><ul class='column twelve'>";
+			$module ="<div id='product-buckets' ><div class='row'><ul class='column twelve'>";
 			foreach ($custom_cat as $product) {
 				
 				$module .= "<li class='column four'>";
@@ -162,9 +167,9 @@ Template Name: Home Page
 			foreach ($news_arrya as $news) {
 				$newsItem .='<article class="column four"role="article"';
 				
-				$newsItem .= '><div class="panel radius " style="height:17em;"><h5 style=" max-height: 3.25em;   overflow: hidden;line-height: 1.5em;">'.$news->post_title.'</h5>';
+				$newsItem .= '><div class="panel radius " style="height:19em;"><h5 style=" max-height: 3.25em;   overflow: hidden;line-height: 1.5em;">'.$news->post_title.'</h5>';
 				$newsItem .='<section class="post_content"><p style="height:6.5em;overflow:hidden;display:block">'.$news->post_content.'</p>';
-				$newsItem .='<a class="tiny button" href="'.$news->guid.'">Read More</a></section></div></article>';
+				$newsItem .='<p style="margin-top:-17px"><small> Date: '.$news->post_date.'</small></p><p><a class="tiny button" href="'.$news->guid.'">Read More</a></p></section></div></article>';
 				++ $binary;
 				}
 			$newsItem .='<div class="clearfix"></div>';

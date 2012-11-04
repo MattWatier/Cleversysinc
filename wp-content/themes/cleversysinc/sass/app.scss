@@ -313,14 +313,29 @@ footer{
 }
 .page, .post, .single{
   .main{
-        @include column(8);
+        @include column(7);
         article{
             @include innerRow(collapse);  
         }
     }
   .sidebar{
-        @include column(4);
+        @include column(5);
        }
+}
+.home{
+   .main{
+        @include column(6);
+        form{
+
+        }
+        article{
+            @include innerRow(collapse);  
+        }
+    }
+  .sidebar{
+        @include column(6);
+       }
+
 }
 .contact{
    .main{

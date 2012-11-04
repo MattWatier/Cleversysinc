@@ -1,55 +1,49 @@
-<?php get_header(); ?>
-			
-			<div id="content" class="row">
-			
-				<div id="main" class="nine columns clearfix" role="main">
+<?php
+/*
+Template Name: NormalPage
+*/
+?>
 
-					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-					
-					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
-						
-						<header>
-							
-							<h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
-						
-						</header> <!-- end article header -->
-					
-						<section class="post_content clearfix" itemprop="articleBody">
-							<?php the_content(); ?>
-					
-						</section> <!-- end article section -->
-						
-						<footer>
-			
-							<?php the_tags('<p class="tags"><span class="tags-title">Tags:</span> ', ', ', '</p>'); ?>
-							
-						</footer> <!-- end article footer -->
-					
-					</article> <!-- end article -->
-					
-					<?php comments_template(); ?>
-					
-					<?php endwhile; ?>		
-					
-					<?php else : ?>
-					
-					<article id="post-not-found">
-					    <header>
-					    	<h1>Not Found</h1>
-					    </header>
-					    <section class="post_content">
-					    	<p>Sorry, but the requested resource was not found on this site.</p>
-					    </section>
-					    <footer>
-					    </footer>
-					</article>
-					
-					<?php endif; ?>
-			
-				</div> <!-- end #main -->
-    
-				<aside class="column three"></aside>
-    
-				</div> <!-- end #content -->
+<?php get_header(); ?>
+
+<div id="content" class="clearfix row">
+
+	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+		<header class="twelve column row"><h1 class="column"><?php the_title(); ?></h1></header>
+		<div class="main">
+			<section class="post_content">
+				<?php the_content(); ?>
+			</section> <!-- end article section -->
+
+		</div> <!-- end #main -->			
+
+	<?php endwhile; else : ?>
+
+		<div id="main" class="twelve columns clearfix" role="main">
+			<article id="post-not-found">
+			    <header>
+			    	<h1>Not Found</h1>
+			    </header>
+			    <section class="post_content">
+			    	<p>Sorry, but the requested resource was not found on this site.</p>
+			    </section>
+			    <footer>
+			    </footer>
+			</article>
+		</div> <!-- end #main -->
+
+	<?php endif; ?>
+	<div class="sidebar"> 
+		<?php
+				include 'block-contact.php';
+				include 'block-advert.php';
+				
+				
+				//get_template_part( 'content', 'advert_block' ); 
+			 ?>
+
+
+	</div>
+</div> <!-- end #content -->
 
 <?php get_footer(); ?>
