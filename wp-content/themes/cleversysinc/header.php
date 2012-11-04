@@ -165,9 +165,10 @@
 						$custom_cat =  get_categories( $args );
 					
 						$menu ="<li  id='blankTab'class='row'>&nbsp;</li>";
-			
+						$tabs ="";
 						foreach ($custom_cat as $product) {
-							$menu .= "<li id='".$product->name."Tab' class='columns twelve'>";
+							$tabs .= '<dd><a href="#'.$product->slug.'">'.$product->name.'</a></dd>';
+							$menu .= "<li id='".$product->slug."Tab' class='columns twelve'>";
 							$menu.="<ul class='column twelve'>";
 							$args = array(
 							   'numberposts' => 8,
@@ -197,7 +198,7 @@
 	</div>
 	<div class="row">
 		<dl class="tabs">
-		 <dd class="active" ><a href="#blank">Close</a></dd>  <dd><a href="#Service">Service</a></dd> <dd><a href="#Software">Software</a></dd>  <dd ><a href="#Hardware">Hardware</a></dd><dt>Products: </dt>
+		 <dd class="active" ><a href="#blank">Close</a></dd> <?php echo $tabs; ?><dt>Products: </dt>
 		</dl>
 	</div>
 </div>

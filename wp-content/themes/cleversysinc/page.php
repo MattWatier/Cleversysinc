@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 			
-			<div id="content">
+			<div id="content" class="row">
 			
-				<div id="main" class="six columns clearfix" role="main">
+				<div id="main" class="nine columns clearfix" role="main">
 
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					
@@ -48,8 +48,8 @@
 			
 				</div> <!-- end #main -->
     
-				<?php get_sidebar(); // sidebar 1 ?>
+				<aside class="column three"></aside>
     
-			</div> <!-- end #content -->
+				</div> <!-- end #content -->
 
 <?php get_footer(); ?>

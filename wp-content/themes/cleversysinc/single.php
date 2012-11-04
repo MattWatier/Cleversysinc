@@ -1,40 +1,23 @@
 <?php get_header(); ?>
 			
-			<div id="content" class="clearfix">
-			
-				<div id="main" class="eight columns clearfix" role="main">
-
+			<div id="content" class="row clearfix">
+				
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-					
-					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
-						
-						<header>
-						
-							<?php the_post_thumbnail( 'wpbs-featured' ); ?>
-							
-							<h1 class="single-title" itemprop="headline"><?php the_title(); ?></h1>
-							
-							<p class="meta"><?php _e("Posted", "bonestheme"); ?> <time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('F jS, Y'); ?></time> <?php _e("by", "bonestheme"); ?> <?php the_author_posts_link(); ?> <span class="amp">&</span> <?php _e("filed under", "bonestheme"); ?> <?php the_category(', '); ?>.</p>
-						
-						</header> <!-- end article header -->
-					
+					  <header class=" row column twelve"><h1 class="column"><?php the_title(); ?></h1></header>
+          
+
+					<div class="main">
+
+					<article id="post-<?php the_ID(); ?>"  role="article">
 						<section class="post_content clearfix" itemprop="articleBody">
 							<?php the_content(); ?>
-							
-					
+							<cite><? the_date(); ?></cite>
 						</section> <!-- end article section -->
-						
-						<footer>
-			
-							<?php the_tags('<p class="tags"><span class="tags-title">Tags:</span> ', ' ', '</p>'); ?>
-							
-						</footer> <!-- end article footer -->
-					
 					</article> <!-- end article -->
 					
 					<?php comments_template(); ?>
 					
-					<?php endwhile; ?>			
+					<?php endwhile; ?>		
 					
 					<?php else : ?>
 					
@@ -53,8 +36,8 @@
 			
 				</div> <!-- end #main -->
     
-				<?php get_sidebar(); // sidebar 1 ?>
-    
-			</div> <!-- end #content -->
+				
+    			<?php get_sidebar(); // sidebar 1 ?>
+				</div> <!-- end #content -->
 
 <?php get_footer(); ?>

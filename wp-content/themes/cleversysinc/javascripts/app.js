@@ -17,8 +17,10 @@ jQuery(document).ready(function ($) {
     $tab.addClass('active');
 
     //Show Tab Content
-    $(contentLocation).closest('.tabs-content').children('li').removeClass('active').hide(600);
-    $(contentLocation).show(600).addClass('active');
+    $(contentLocation).closest('.tabs-content').children('li').removeClass('active').slideUp('slow');
+    $(contentLocation).stop(true,false).slideDown('slow').addClass('active');
+
+
   }
 
   $('dl.tabs dd a').on('click.fndtn', function (event) {

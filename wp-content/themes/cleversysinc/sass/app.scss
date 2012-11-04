@@ -41,6 +41,56 @@
 @import "foundation/components/modules/clearing";
 // @import "foundation/components/modules/navbar";
 
+/**** Isotope Filtering ****/
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:      -o-transform, opacity;
+          transition-property:         transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+      -ms-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
+}
+
 
 $blue:#426289;
 $blue-dark:#2c394c;
@@ -158,7 +208,7 @@ $grey:#e0e0e0;
      a{
         margin-top:0px;
         color: white;
-        font-size: 12px;
+        font-size: 14px;
         height: 33px;
         padding: 0px 10px;
         text-decoration:none;
@@ -261,7 +311,7 @@ footer{
  }
 
 }
-.page{
+.page, .post, .single{
   .main{
         @include column(8);
         article{
@@ -276,7 +326,7 @@ footer{
    .main{
         @include column(6);
         form{
-            @include column(12);
+
         }
         article{
             @include innerRow(collapse);  
@@ -353,5 +403,15 @@ footer{
       td{}
       .odd{background-color: scale-color($grey, $lightness: 40%);}
     }
+
+}
+
+#tumblelog{
+  .item a {
+    &:hover .panel{
+    border-top-color: $red;
+    background-color: scale-color($blue, $lightness:80%);
+    }
+  }
 
 }
