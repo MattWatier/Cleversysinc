@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: NormalPage
+Template Name: Products Page
 */
 ?>
 
@@ -33,18 +33,32 @@ Template Name: NormalPage
 		</div> <!-- end #main -->
 
 	<?php endif; ?>
-	<div class="sidebar"> 
+	<div class="sidebar">
 		<?php
 				include 'block-contact.php';
 				include 'block-software_suite.php';
-				include 'block-advert.php';
-				
-				
-				//get_template_part( 'content', 'advert_block' ); 
 			 ?>
 
 
 	</div>
-</div> <!-- end #content -->
+</div> <!-- end #content -->	
+<div class="full-width row">
+	<? 
+			$args = array('taxonomy' => 'custom_product_cat' );  
+			$custom_cat =  get_categories( $args );
+		
+			$module ="<div class='row'><ul class='column twelve'>";
+			foreach ($custom_cat as $product) {
+				
+				$module .= "<li class='column four'>";
+				$module .= "<h3>".$product->name."</h3>";
+				$module .= "<p>".$product->description."</p>";
+				$module .= "<a href='".$product->taxonomy."/".$product->slug."' class='button'>Filter »</a></li>";
+				}
+			$module .= "</ul></div>";
+			echo $module;
+			?>	
+	</div>
+
 
 <?php get_footer(); ?>

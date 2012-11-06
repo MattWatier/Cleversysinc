@@ -312,6 +312,9 @@ footer{
 
 }
 .page, .post, .single{
+  .fullwidth{
+    @include column(12);
+  }
   .main{
         @include column(7);
         article{

@@ -173,8 +173,7 @@
 							$menu .= "<li id='".$product->slug."Tab' class='columns twelve'>";
 							$menu.="<ul class='column twelve'>";
 							$args = array(
-							   'numberposts' => 8,
-							   'orderby' => 'rand',
+							   'numberposts' => -1,
 							   'post_type' => 'csi_products',
 							   'custom_product_cat' => $product->slug
 							);
