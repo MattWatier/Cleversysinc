@@ -35,9 +35,9 @@ Template Name: NormalPage
 	<?php endif; ?>
 	<div class="sidebar"> 
 		<?php
-				include 'block-contact.php';
-				include 'block-software_suite.php';
-				include 'block-advert.php';
+				include 'blocks/block-advert.php';
+				include 'blocks/block-contact.php';
+				include 'blocks/block-software_suite.php';
 				
 				
 				//get_template_part( 'content', 'advert_block' ); 

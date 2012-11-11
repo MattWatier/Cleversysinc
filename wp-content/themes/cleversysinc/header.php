@@ -13,7 +13,6 @@
 		<title><?php wp_title('', true, 'right'); ?></title>
 				
 		<meta name="viewport" content="width=device-width; initial-scale=1.0">
-		<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/javascripts/jquery.min.js"></script>
 	
 		<!-- icons & favicons -->
 		<!-- For iPhone 4 -->

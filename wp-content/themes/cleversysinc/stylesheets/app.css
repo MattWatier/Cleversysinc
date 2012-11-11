@@ -3195,7 +3195,7 @@ div.orbit-wrapper span.rotator {
   position: absolute;
   top: 0;
   left: -20px;
-  background: url('/images/foundation/orbit/rotator-black.png?1351360080') no-repeat;
+  background: url('../images/foundation/orbit/rotator-black.png?1352569303') no-repeat;
   z-index: 3;
 }
 /* line 27, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.2.0/scss/foundation/components/modules/_orbit.scss */
@@ -3217,7 +3217,7 @@ div.orbit-wrapper span.mask {
 div.orbit-wrapper span.mask.move {
   width: 40px;
   left: 0;
-  background: url('/images/foundation/orbit/timer-black.png?1351360080') repeat 0 0;
+  background: url('../images/foundation/orbit/timer-black.png?1352569304') repeat 0 0;
 }
 /* line 32, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.2.0/scss/foundation/components/modules/_orbit.scss */
 div.orbit-wrapper span.pause {
@@ -3227,13 +3227,13 @@ div.orbit-wrapper span.pause {
   position: absolute;
   top: 0;
   left: 0;
-  background: url('/images/foundation/orbit/pause-black.png?1351360080') no-repeat;
+  background: url('../images/foundation/orbit/pause-black.png?1352569304') no-repeat;
   z-index: 4;
   opacity: 0;
 }
 /* line 33, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.2.0/scss/foundation/components/modules/_orbit.scss */
 div.orbit-wrapper span.pause.active {
-  background: url('/images/foundation/orbit/pause-black.png?1351360080') no-repeat 0 -40px;
+  background: url('../images/foundation/orbit/pause-black.png?1352569304') no-repeat 0 -40px;
 }
 /* line 35, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.2.0/scss/foundation/components/modules/_orbit.scss */
 div.orbit-wrapper div.timer:hover span.pause, div.orbit-wrapper span.pause.active {
@@ -3280,24 +3280,24 @@ div.orbit-wrapper div.slider-nav span {
 }
 /* line 48, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.2.0/scss/foundation/components/modules/_orbit.scss */
 div.orbit-wrapper div.slider-nav span.right {
-  background: url('/images/foundation/orbit/right-arrow.png?1351360080');
+  background: url('../images/foundation/orbit/right-arrow.png?1352569304');
   background-size: 100%;
   right: 0;
 }
 /* line 49, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.2.0/scss/foundation/components/modules/_orbit.scss */
 div.orbit-wrapper div.slider-nav span.left {
-  background: url('/images/foundation/orbit/left-arrow.png?1351360080');
+  background: url('../images/foundation/orbit/left-arrow.png?1352569304');
   background-size: 100%;
   left: 0;
 }
 
 /* line 54, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.2.0/scss/foundation/components/modules/_orbit.scss */
 .lt-ie9 div.orbit-wrapper div.slider-nav span.right {
-  background: url('/images/foundation/orbit/right-arrow-small.png?1351360080');
+  background: url('../images/foundation/orbit/right-arrow-small.png?1352569304');
 }
 /* line 55, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.2.0/scss/foundation/components/modules/_orbit.scss */
 .lt-ie9 div.orbit-wrapper div.slider-nav span.left {
-  background: url('/images/foundation/orbit/left-arrow-small.png?1351360079');
+  background: url('../images/foundation/orbit/left-arrow-small.png?1352569304');
 }
 
 /* Bullet Nav ---------------------- */
@@ -3318,7 +3318,7 @@ ul.orbit-bullets li {
   cursor: pointer;
   color: #999999;
   text-indent: -9999px;
-  background: url('/images/foundation/orbit/bullets.jpg?1351360079') no-repeat 4px 0;
+  background: url('../images/foundation/orbit/bullets.jpg?1352569303') no-repeat 4px 0;
   width: 13px;
   height: 12px;
   overflow: hidden;
@@ -3859,20 +3859,161 @@ ul[data-clearing] li.clearing-feature ~ li {
   border-top: 4px solid white;
 }
 
+/*
+
+1000 px wide
+1000/3;
+
+
+*/
+/* line 14, ../sass/_revealer.scss */
+.revealer {
+  margin: 0 10px 10px 0;
+  overflow: hidden;
+  position: relative;
+  width: 311.33333px;
+  height: 233.5px;
+  background-color: #ccc;
+  border: #999 1px solid;
+  float: left;
+}
+/* line 24, ../sass/_revealer.scss */
+.revealer .title {
+  font-size: 19.27778px;
+  line-height: 1.25em;
+  margin: 0 10px;
+  width: 235px;
+  float: left;
+}
+/* line 31, ../sass/_revealer.scss */
+.revealer .reveal-holder {
+  height: 233.5px;
+  width: 100%;
+  position: relative;
+}
+/* line 35, ../sass/_revealer.scss */
+.revealer .reveal-holder img {
+  width: 289.33333px;
+  height: 144.66667px;
+  margin: 10px;
+  position: relative;
+  border: #ddd 1px solid;
+  border-top-color: #ddd;
+  border-bottom-color: #666;
+  border-right-color: #666;
+  border-left-color: #ddd;
+}
+/* line 48, ../sass/_revealer.scss */
+.revealer .reveal-slide {
+  width: 100%;
+  height: 233.5px;
+  top: 233.5px;
+  position: absolute;
+  background-color: #ccc;
+  border: #999 1px solid;
+}
+/* line 49, ../sass/_revealer.scss */
+.revealer .reveal-slide .title {
+  margin: 10px;
+}
+/* line 58, ../sass/_revealer.scss */
+.revealer .reveal-slide .button {
+  margin: 10px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+/* line 67, ../sass/_revealer.scss */
+.revealer .icon {
+  margin: 0 10px;
+  width: 30px;
+  height: 30px;
+  display: block;
+  background-color: #77f;
+  float: right;
+  text-indent: -3000px;
+}
+/* line 82, ../sass/_revealer.scss */
+.revealer .toggle {
+  position: absolute;
+  top: 203.5px;
+  right: 0px;
+}
+/* line 86, ../sass/_revealer.scss */
+.revealer .toggle span {
+  border: #ddd 1px solid;
+  background-color: #426289 !important;
+  -moz-border-radius-topleft: 8px;
+  -webkit-border-top-left-radius: 8px;
+  border-top-left-radius: 8px;
+  -moz-border-radius-topright: 8px;
+  -webkit-border-top-right-radius: 8px;
+  border-top-right-radius: 8px;
+  -moz-border-radius-bottomleft: 0px;
+  -webkit-border-bottom-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  -moz-border-radius-bottomright: 0px;
+  -webkit-border-bottom-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom: 0px none;
+}
+/* line 99, ../sass/_revealer.scss */
+.revealer .toggle.on span {
+  background-color: #b22825 !important;
+  -moz-border-radius-topleft: 0px;
+  -webkit-border-top-left-radius: 0px;
+  border-top-left-radius: 0px;
+  -moz-border-radius-topright: 0px;
+  -webkit-border-top-right-radius: 0px;
+  border-top-right-radius: 0px;
+  -moz-border-radius-bottomleft: 8px;
+  -webkit-border-bottom-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  -moz-border-radius-bottomright: 8px;
+  -webkit-border-bottom-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top: 0px none;
+}
+
+/* line 66, my-icons/*.png */
+.my-icons-sprite, .my-icons-brain, .revealer .icon.brain, .my-icons-down-arrow, .revealer .toggle.on span, .my-icons-lab, .my-icons-up-arrow, .revealer .icon, .icon {
+  background: url('../images/my-icons-sc853b00923.png') no-repeat;
+}
+
+/* line 60, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.my-icons-brain, .revealer .icon.brain {
+  background-position: 0 -60px;
+}
+
+/* line 60, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.my-icons-down-arrow, .revealer .toggle.on span {
+  background-position: 0 0;
+}
+
+/* line 60, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.my-icons-lab {
+  background-position: 0 -90px;
+}
+
+/* line 60, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.my-icons-up-arrow, .revealer .icon, .icon {
+  background-position: 0 -30px;
+}
+
 /**** Isotope Filtering ****/
-/* line 46, ../sass/app.scss */
+/* line 62, ../sass/app.scss */
 .isotope-item {
   z-index: 2;
 }
 
-/* line 50, ../sass/app.scss */
+/* line 66, ../sass/app.scss */
 .isotope-hidden.isotope-item {
   pointer-events: none;
   z-index: 1;
 }
 
 /**** Isotope CSS3 transitions ****/
-/* line 58, ../sass/app.scss */
+/* line 74, ../sass/app.scss */
 .isotope,
 .isotope .isotope-item {
   -webkit-transition-duration: 0.8s;
@@ -3882,7 +4023,7 @@ ul[data-clearing] li.clearing-feature ~ li {
   transition-duration: 0.8s;
 }
 
-/* line 66, ../sass/app.scss */
+/* line 82, ../sass/app.scss */
 .isotope {
   -webkit-transition-property: height, width;
   -moz-transition-property: height, width;
@@ -3891,7 +4032,7 @@ ul[data-clearing] li.clearing-feature ~ li {
   transition-property: height, width;
 }
 
-/* line 74, ../sass/app.scss */
+/* line 90, ../sass/app.scss */
 .isotope .isotope-item {
   -webkit-transition-property: -webkit-transform, opacity;
   -moz-transition-property: -moz-transform, opacity;
@@ -3901,7 +4042,7 @@ ul[data-clearing] li.clearing-feature ~ li {
 }
 
 /**** disabling Isotope CSS3 transitions ****/
-/* line 86, ../sass/app.scss */
+/* line 102, ../sass/app.scss */
 .isotope.no-transition,
 .isotope.no-transition .isotope-item,
 .isotope .isotope-item.no-transition {
@@ -3912,18 +4053,18 @@ ul[data-clearing] li.clearing-feature ~ li {
   transition-duration: 0s;
 }
 
-/* line 102, ../sass/app.scss */
+/* line 113, ../sass/app.scss */
 .panel.callout h1, .panel.callout h2, .panel.callout h3, .panel.callout h4, .panel.callout h5 {
   color: #eaeff5;
 }
 
-/* line 105, ../sass/app.scss */
+/* line 116, ../sass/app.scss */
 #banner {
   display: block;
   background-color: #426289;
   margin: 30px 0;
 }
-/* line 109, ../sass/app.scss */
+/* line 120, ../sass/app.scss */
 #banner #image {
   height: 380px;
   display: block;
@@ -3935,12 +4076,12 @@ ul[data-clearing] li.clearing-feature ~ li {
   -moz-box-shadow: 0px 0px 6px 0px #555555;
   box-shadow: 0px 0px 6px 0px #555555;
 }
-/* line 117, ../sass/app.scss */
+/* line 128, ../sass/app.scss */
 #banner #image h1 {
   color: white;
 }
 
-/* line 121, ../sass/app.scss */
+/* line 132, ../sass/app.scss */
 #top-header {
   width: 100%;
   display: block;
@@ -3953,26 +4094,26 @@ ul[data-clearing] li.clearing-feature ~ li {
   border-bottom: 6px solid #b22825;
   /*    End of top nav  */
 }
-/* line 131, ../sass/app.scss */
+/* line 142, ../sass/app.scss */
 #top-header #top-nav .menu-main_nav-container {
   float: left;
   margin: 5px;
 }
-/* line 135, ../sass/app.scss */
+/* line 146, ../sass/app.scss */
 #top-header #top-nav .menu-utility_nav-container {
   float: right;
   margin: 5px;
 }
-/* line 139, ../sass/app.scss */
+/* line 150, ../sass/app.scss */
 #top-header #top-nav ul {
   list-style: none;
 }
-/* line 141, ../sass/app.scss */
+/* line 152, ../sass/app.scss */
 #top-header #top-nav ul li {
   float: left;
   display: inline-block;
 }
-/* line 145, ../sass/app.scss */
+/* line 156, ../sass/app.scss */
 #top-header #top-nav ul li a {
   color: white;
   font-weight: normal;
@@ -3981,7 +4122,7 @@ ul[data-clearing] li.clearing-feature ~ li {
   text-shadow: -1 -1 2 2 #2c394c, -1 -1 2 2 #2c394c;
 }
 
-/* line 158, ../sass/app.scss */
+/* line 169, ../sass/app.scss */
 #product_collection div#drop-down {
   background-color: #b22825;
   display: block;
@@ -3989,57 +4130,57 @@ ul[data-clearing] li.clearing-feature ~ li {
   margin: 0px;
   padding: 0px;
 }
-/* line 164, ../sass/app.scss */
+/* line 175, ../sass/app.scss */
 #product_collection div#drop-down #collapse-nav {
   list-style: none;
   margin: 0x;
 }
-/* line 167, ../sass/app.scss */
+/* line 178, ../sass/app.scss */
 #product_collection div#drop-down #collapse-nav li {
   padding: 10px 0;
   margin-top: -1px;
   border: none;
 }
-/* line 171, ../sass/app.scss */
+/* line 182, ../sass/app.scss */
 #product_collection div#drop-down #collapse-nav li ul {
   list-style: none;
 }
-/* line 172, ../sass/app.scss */
+/* line 183, ../sass/app.scss */
 #product_collection div#drop-down #collapse-nav li ul li {
   height: 2em;
   float: left;
 }
-/* line 175, ../sass/app.scss */
+/* line 186, ../sass/app.scss */
 #product_collection div#drop-down #collapse-nav li ul li a {
   color: white;
 }
-/* line 179, ../sass/app.scss */
+/* line 190, ../sass/app.scss */
 #product_collection div#drop-down #collapse-nav li#blankTab {
   margin: -10px;
   height: 0;
   padding: 0;
 }
-/* line 188, ../sass/app.scss */
+/* line 199, ../sass/app.scss */
 #product_collection dl.tabs {
   border-bottom: none;
 }
-/* line 190, ../sass/app.scss */
+/* line 201, ../sass/app.scss */
 #product_collection dl.tabs dt {
   float: right;
   color: #333;
 }
-/* line 191, ../sass/app.scss */
+/* line 202, ../sass/app.scss */
 #product_collection dl.tabs dd {
   float: right;
   background-color: #b22825;
   margin-top: -5px;
 }
-/* line 195, ../sass/app.scss */
+/* line 206, ../sass/app.scss */
 #product_collection dl.tabs dd.active {
   border-top: 0px none;
   margin-top: -5px;
 }
-/* line 198, ../sass/app.scss */
+/* line 209, ../sass/app.scss */
 #product_collection dl.tabs dd.active a {
   font-weight: normal;
   border-left: 0px none;
@@ -4048,7 +4189,7 @@ ul[data-clearing] li.clearing-feature ~ li {
   background-color: #6d1210;
   margin-top: 0px;
 }
-/* line 208, ../sass/app.scss */
+/* line 219, ../sass/app.scss */
 #product_collection dl.tabs dd a {
   margin-top: 0px;
   color: white;
@@ -4057,12 +4198,12 @@ ul[data-clearing] li.clearing-feature ~ li {
   padding: 0px 10px;
   text-decoration: none;
 }
-/* line 215, ../sass/app.scss */
+/* line 226, ../sass/app.scss */
 #product_collection dl.tabs dd a:hover {
   text-decoration: underline;
 }
 
-/* line 220, ../sass/app.scss */
+/* line 231, ../sass/app.scss */
 div.logo {
   text-indent: -2000px;
   background-image: url("../images/logo.jpg");
@@ -4071,23 +4212,28 @@ div.logo {
   width: 270px;
   margin: -55px 0 14px 21px;
 }
+/* line 238, ../sass/app.scss */
+div.logo cite {
+  text-indent: -2000px;
+  display: block;
+}
 
-/* line 231, ../sass/app.scss */
+/* line 243, ../sass/app.scss */
 #featuredContent h3, #featuredContent p, #featuredContent a {
   color: #fff;
   margin-left: 30px;
   clear: left;
   float: left;
 }
-/* line 238, ../sass/app.scss */
+/* line 250, ../sass/app.scss */
 #featuredContent h3 {
   margin-top: 2em;
 }
-/* line 240, ../sass/app.scss */
+/* line 252, ../sass/app.scss */
 #featuredContent p {
   margin-bottom: .5em;
 }
-/* line 243, ../sass/app.scss */
+/* line 255, ../sass/app.scss */
 #featuredContent a {
   display: inline-block;
   background-color: #b22825;
@@ -4095,12 +4241,12 @@ div.logo {
   padding: 5px 15px 5px 30px;
 }
 
-/* line 252, ../sass/app.scss */
+/* line 264, ../sass/app.scss */
 #featuredContent .dark h3, #featuredContent .dark p {
   color: #333;
 }
 
-/* line 257, ../sass/app.scss */
+/* line 269, ../sass/app.scss */
 .wrapper {
   border: 1px solid #ccc;
   padding: 10px 10px 0px;
@@ -4108,62 +4254,62 @@ div.logo {
   -moz-box-shadow: #aaaaaa 2px 2px 20px;
   box-shadow: #aaaaaa 2px 2px 20px;
 }
-/* line 261, ../sass/app.scss */
+/* line 273, ../sass/app.scss */
 .wrapper .orbit-wrapper {
   margin-bottom: -6px;
 }
 
-/* line 265, ../sass/app.scss */
+/* line 277, ../sass/app.scss */
 #home-main {
   margin-top: 2em;
 }
 
-/* line 268, ../sass/app.scss */
+/* line 280, ../sass/app.scss */
 #product-buckets {
   background-color: #e0e0e0;
   background: url(../images/grey-shadow.jpg) #e0e0e0 top repeat-x;
   padding: 20px 0;
 }
-/* line 272, ../sass/app.scss */
+/* line 284, ../sass/app.scss */
 #product-buckets ul {
   list-style: none;
 }
-/* line 274, ../sass/app.scss */
+/* line 286, ../sass/app.scss */
 #product-buckets ul li + li {
   border-left: 3px dotted #999;
 }
-/* line 275, ../sass/app.scss */
+/* line 287, ../sass/app.scss */
 #product-buckets ul li {
   padding: 0 0 0 25px;
 }
-/* line 278, ../sass/app.scss */
+/* line 290, ../sass/app.scss */
 #product-buckets ul li p {
   padding: 0px 20px 0px 0px;
 }
 
-/* line 283, ../sass/app.scss */
+/* line 295, ../sass/app.scss */
 footer {
   padding: 1em;
   background-color: #426289;
   margin-top: 1em;
 }
-/* line 287, ../sass/app.scss */
+/* line 299, ../sass/app.scss */
 footer ul {
   margin: 15px;
   list-style: none;
 }
-/* line 289, ../sass/app.scss */
+/* line 301, ../sass/app.scss */
 footer ul li a {
   color: white;
 }
-/* line 292, ../sass/app.scss */
+/* line 304, ../sass/app.scss */
 footer h5 {
   color: white;
   border-bottom: 1px solid #d6dfeb;
   padding-bottom: .25em;
   font-weight: 900;
 }
-/* line 298, ../sass/app.scss */
+/* line 310, ../sass/app.scss */
 footer .panel.callout {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -4174,145 +4320,200 @@ footer .panel.callout {
   border: #354e6e;
   height: 185px;
 }
-/* line 299, ../sass/app.scss */
+/* line 311, ../sass/app.scss */
 footer .panel.callout h5 {
   border-bottom: 1px solid #d6dfeb;
   padding-bottom: .25em;
   font-weight: 900;
 }
-/* line 309, ../sass/app.scss */
+/* line 321, ../sass/app.scss */
 footer .panel.callout .button-bar .button {
   margin: .25em;
 }
 
-/* line 315, ../sass/app.scss */
+/* line 327, ../sass/app.scss */
+.sidebar ul {
+  list-style: none;
+}
+/* line 329, ../sass/app.scss */
+.sidebar ul li {
+  list-style: none;
+}
+
+/* line 335, ../sass/app.scss */
+.Products ul li {
+  list-style: none;
+}
+
+/* line 339, ../sass/app.scss */
 .page .fullwidth, .post .fullwidth, .single .fullwidth {
   width: 100%;
 }
-/* line 318, ../sass/app.scss */
+/* line 342, ../sass/app.scss */
 .page .main, .post .main, .single .main {
   width: 58.33333%;
 }
-/* line 320, ../sass/app.scss */
+/* line 344, ../sass/app.scss */
 .page .main article, .post .main article, .single .main article {
   margin: 0;
 }
-/* line 324, ../sass/app.scss */
+/* line 348, ../sass/app.scss */
 .page .sidebar, .post .sidebar, .single .sidebar {
   width: 41.66667%;
 }
 
-/* line 329, ../sass/app.scss */
+/* line 353, ../sass/app.scss */
 .home .main {
   width: 50%;
 }
-/* line 334, ../sass/app.scss */
+/* line 358, ../sass/app.scss */
 .home .main article {
   margin: 0;
 }
-/* line 338, ../sass/app.scss */
+/* line 362, ../sass/app.scss */
 .home .sidebar {
   width: 50%;
 }
 
-/* line 344, ../sass/app.scss */
+/* line 369, ../sass/app.scss */
 .contact .main {
   width: 50%;
 }
-/* line 349, ../sass/app.scss */
+/* line 374, ../sass/app.scss */
 .contact .main article {
   margin: 0;
 }
-/* line 353, ../sass/app.scss */
+/* line 378, ../sass/app.scss */
 .contact .sidebar {
   width: 50%;
 }
 
-/* line 359, ../sass/app.scss */
+/* line 384, ../sass/app.scss */
 .csi-products .main {
   width: 66.66667%;
 }
-/* line 361, ../sass/app.scss */
+/* line 386, ../sass/app.scss */
 .csi-products .main article {
   margin: 0;
 }
-/* line 363, ../sass/app.scss */
+/* line 388, ../sass/app.scss */
 .csi-products .main article header {
   width: 100%;
 }
-/* line 364, ../sass/app.scss */
+/* line 389, ../sass/app.scss */
 .csi-products .main article section {
   width: 100%;
 }
-/* line 370, ../sass/app.scss */
+/* line 395, ../sass/app.scss */
 .csi-products .sidebar {
   width: 33.33333%;
 }
-/* line 373, ../sass/app.scss */
+/* line 398, ../sass/app.scss */
 .csi-products .sidebar .behaviors h5 {
   font-size: 1em;
   font-weight: 900;
   color: #426289;
 }
-/* line 376, ../sass/app.scss */
+/* line 401, ../sass/app.scss */
 .csi-products .sidebar .behaviors ul {
   margin: 0 -15px;
   list-style: none;
 }
-/* line 380, ../sass/app.scss */
+/* line 405, ../sass/app.scss */
 .csi-products .sidebar .behaviors ul li {
   margin: 0 auto !important;
   width: 33.33333%;
   float: right;
 }
-/* line 390, ../sass/app.scss */
+/* line 415, ../sass/app.scss */
 .csi-products .sidebar .accordion h6 {
   font-size: .95em;
   font-weight: 900;
   color: grey;
 }
-/* line 394, ../sass/app.scss */
+/* line 419, ../sass/app.scss */
 .csi-products .sidebar .accordion ul {
   list-style-type: disc;
   font-size: .9em;
 }
-/* line 400, ../sass/app.scss */
+/* line 425, ../sass/app.scss */
 .csi-products .sidebar h5, .csi-products .sidebar .title {
   font-size: 1em;
   font-weight: 900;
   color: #426289;
 }
-/* line 403, ../sass/app.scss */
+/* line 428, ../sass/app.scss */
 .csi-products .sidebar ul {
   list-style: none;
   font-size: .9em;
 }
-/* line 407, ../sass/app.scss */
+/* line 432, ../sass/app.scss */
 .csi-products .sidebar ul li {
   line-height: 1.4em;
   margin-bottom: .7em;
 }
-/* line 414, ../sass/app.scss */
+/* line 439, ../sass/app.scss */
 .csi-products table.dimensions {
   border: 1px solid #e0e0e0;
   width: 100%;
 }
-/* line 417, ../sass/app.scss */
+/* line 442, ../sass/app.scss */
 .csi-products table.dimensions thead {
   background-color: #83a0c3;
   font-weight: 900;
 }
-/* line 418, ../sass/app.scss */
+/* line 443, ../sass/app.scss */
 .csi-products table.dimensions thead td {
   padding: .5em;
 }
-/* line 422, ../sass/app.scss */
+/* line 447, ../sass/app.scss */
 .csi-products table.dimensions .odd {
   background-color: #ececec;
 }
 
-/* line 429, ../sass/app.scss */
+/* line 454, ../sass/app.scss */
 #tumblelog .item a:hover .panel {
   border-top-color: #b22825;
   background-color: #d6dfeb;
+}
+
+/* line 461, ../sass/app.scss */
+.toplink {
+  display: block;
+  height: 30px;
+  vertical-align: middle;
+  text-align: right;
+}
+/* line 466, ../sass/app.scss */
+.toplink .icon {
+  margin-top: -5px;
+  -moz-border-radius-topleft: 5px;
+  -webkit-border-top-left-radius: 5px;
+  border-top-left-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -webkit-border-top-right-radius: 5px;
+  border-top-right-radius: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: rgba(66, 98, 137, 0.8);
+}
+/* line 474, ../sass/app.scss */
+.toplink:hover .icon {
+  background-color: #426289;
+}
+
+/* line 478, ../sass/app.scss */
+.icon {
+  margin: 0 10px;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  background-color: #77f;
+  float: right;
+  text-align: left;
+  text-indent: -3000px;
 }

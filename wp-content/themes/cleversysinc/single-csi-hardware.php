@@ -35,7 +35,8 @@
                             </div>
                             <div>
                             	<h4>Discription</h4>
-								<?php the_content(); ?>
+								<?php the_content();
+								 $postID = get_the_ID();?>
                             </div>
 	                       <h4>Dimentions</h4>
                        		<? $field = get_field("dimenstions");
@@ -86,7 +87,11 @@
 								echo $items;
 							}
 						?>
-						
+					<? include 'blocks/renderer-related_products.php';
+
+						$related_products = related_products($postID);
+						echo $related_products;
+					?>	
                     <div class="panel">
                        <h5 class="title">Behavior Recognition</h5>
                        		<? $field = get_field("behavior_recognition");  echo $field;?>

@@ -1,3 +1,9 @@
+$blue:#426289;
+$blue-dark:#2c394c;
+$blue-light:#576781;
+$red:#b22825;
+$red-dark:#6d1210;
+$grey:#e0e0e0;
 // You custom settings file to override Foundation defaults
 @import "settings";
 
@@ -12,6 +18,7 @@
  @import "modular-scale";
  
  // Control which mixins you have access too
+@import "compass/css3/border-radius";
 
  @import "foundation/mixins/css-triangle";
  @import "foundation/mixins/font-size";
@@ -40,6 +47,15 @@
  @import "foundation/components/modules/offcanvas";
 @import "foundation/components/modules/clearing";
 // @import "foundation/components/modules/navbar";
+
+// objects in cleversys
+@import "_revealer";
+
+
+@import "my-icons/*.png";
+@include all-my-icons-sprites;
+
+
 
 /**** Isotope Filtering ****/
 
@@ -92,12 +108,7 @@
 }
 
 
-$blue:#426289;
-$blue-dark:#2c394c;
-$blue-light:#576781;
-$red:#b22825;
-$red-dark:#6d1210;
-$grey:#e0e0e0;
+
 .panel.callout{
     h1,h2,h3,h4,h5{color: scale-color($blue, $lightness: 90%);}
 
@@ -224,6 +235,7 @@ div.logo{
   height: 90px;
   width: 270px;
   margin: -55px 0 14px 21px;
+  cite{  text-indent: -2000px;display: block;}
 }
 
 #featuredContent{
@@ -311,6 +323,18 @@ footer{
  }
 
 }
+.sidebar{ 
+    ul{
+      list-style: none;
+        li{
+            list-style: none;
+        }
+      }
+    }
+.Products{
+  ul li{
+  list-style: none;
+}}
 .page, .post, .single{
   .fullwidth{
     @include column(12);
@@ -337,6 +361,7 @@ footer{
     }
   .sidebar{
         @include column(6);
+
        }
 
 }
@@ -433,3 +458,30 @@ footer{
   }
 
 }
+.toplink{
+  display: block;
+  height: 30px;
+  vertical-align: middle;
+  text-align: right;
+  .icon{
+    margin-top: -5px;
+    @include border-top-left-radius(5px);
+      @include border-top-right-radius(5px);
+      @include border-bottom-left-radius(5px);
+      @include border-bottom-right-radius(5px);
+      background-color:rgba( $blue , .8);
+  }
+  &:hover .icon{
+      background-color:rgba( $blue , 1);
+  };
+}
+.icon{
+    margin: 0 10px;
+    width:30px;
+    height: 30px;
+    display: inline-block;
+    background-color: #77f;
+    float: right;
+    text-align: left;
+    text-indent: -3000px;
+    @extend .my-icons-up-arrow;}

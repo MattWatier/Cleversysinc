@@ -1,10 +1,13 @@
 <?php get_header(); ?>
 			
-			<div id="content" class="clearfix">
+			<div id="content" class="clearfix row">
 			
-				<div id="main" class="eight columns clearfix" role="main">
+				<div id="main" class="eight columns clearfix">
 				
-					<h1 class=""><span>Search Results for:</span> <?php echo esc_attr(get_search_query()); ?></h1>
+					<div class="panel callout">
+						<h1 class=""><span style="font-size:.5em;display:block;">Search Results for:</span> <?php echo esc_attr(get_search_query()); ?></h1>
+
+					</div>
 
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					
@@ -23,10 +26,6 @@
 					
 						</section> <!-- end article section -->
 						
-						<footer>
-					
-							
-						</footer> <!-- end article footer -->
 					
 					</article> <!-- end article -->
 					
@@ -64,7 +63,7 @@
 			
 				</div> <!-- end #main -->
     			
-    			<?php get_sidebar(); // sidebar 1 ?>
+    				<?php get_sidebar(); // sidebar 1 ?>
     
 			</div> <!-- end #content -->
 
