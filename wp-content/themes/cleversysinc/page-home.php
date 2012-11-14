@@ -67,8 +67,8 @@ Template Name: Home Page
 			
 			
 			<?php
-				include 'block-contact.php';
-				include 'block-advert.php';
+				include 'blocks/block-contact.php';
+				include 'blocks/block-advert.php';
 			
 				
 				//get_template_part( 'content', 'advert_block' ); 

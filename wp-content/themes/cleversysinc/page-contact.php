@@ -9,7 +9,7 @@ Pulls in two contact pages contact page & basic oncatct form.
 		<div id="content" class="contact clearfix row ">
     		<article class="main" role="main">
 	    			<header><h1 class="column"><?php the_title(); ?></h1></header>
-					<section class="post_content"><?php the_content(); ?></section>
+					<section class="post_content column"><?php the_content(); ?></section>
 			</article> <!-- end #main -->
 	<?php endwhile; ?>	
 	<?php else : ?>
