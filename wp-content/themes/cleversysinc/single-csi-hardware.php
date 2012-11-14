@@ -28,7 +28,7 @@
 						<section class="post_content clearfix">
                             <div class=" panel">
                                 
-                                <? $field = get_field("image");
+                                <? $field = get_field("featured_image");
                                 	$items = '<img style="margin:0 auto;display:block;" src="'.$field["sizes"]["wpf-featured"].'" alt="'.$field["caption"].'">';
                                 	echo $items;
                                  ?>
