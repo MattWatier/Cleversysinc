@@ -11,10 +11,10 @@
 	$item_slug = $prodcutItem->post_name;
 	$item_type = $prodcutItem->post_type;
 	$item_image = get_field("featured_image",$item_ID);
-	$image_link = $item_image["sizes"]["post-thumbnail"];
+	$image_link = $item_image["sizes"]["bones-thumb-300"];
 
 	if( $item_image == false || $image_link == "" ){ 
-	$image_link = "http://placehold.it/350x150/333333/ffffff";
+	$image_link = "http://placehold.it/300x150/333333/ffffff";
 	}
 
 	$item= "";

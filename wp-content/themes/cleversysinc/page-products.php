@@ -70,8 +70,7 @@ Template Name: Products Page
 							$linkList ='<ul class="column twelve">';
 							foreach($products  as $single_product){
 								$item_image = get_field("featured_image",$single_product->ID);
-								$image_link = $item_image["sizes"]["post-thumbnail"];
-								print_r($image_link);		
+								$image_link = $item_image["sizes"]["post-thumbnail"];	
 								$linkList .= '<li>';
 								$linkList .= productbox($single_product);
 								$linklist .= '</li>';

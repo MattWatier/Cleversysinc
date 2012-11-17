@@ -56,7 +56,7 @@ function bones_queue_js(){ if (!is_admin()){ if ( is_singular() AND comments_ope
 // Adding WP 3+ Functions & Theme Support
 function bones_theme_support() {
 	add_theme_support( 'post-thumbnails' );      // wp thumbnails (sizes handled in functions.php)
-	set_post_thumbnail_size( 125, 125, true );   // default thumb size
+	set_post_thumbnail_size( 300, 150, true );   // default thumb size
 	add_theme_support( 'custom-background' );   // wp custom background
 	add_theme_support( 'automatic-feed-links' ); // rss thingy
 	// to add header image support go here: http://themble.com/support/adding-header-background-image-support/
