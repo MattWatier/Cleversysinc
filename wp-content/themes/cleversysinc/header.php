@@ -180,7 +180,7 @@
 							$linkList = "";
 							foreach($links as $link){
 							
-								$linkList .='<li class="column three"><a href="/?'.$link->post_type.'='.$link->post_name.'#blank">'.$link->post_title.'</a></li>';
+								$linkList .='<li class="column three"><a href="'.get_bloginfo(wpurl).'/?'.$link->post_type.'='.$link->post_name.'#blank">'.$link->post_title.'</a></li>';
 								
 
 								
@@ -203,6 +203,6 @@
 	</div>
 </div>
 <div class="row" style="overflow:visible;">
-		<div class="logo"><h1>Cleversys Inc</h1><cite>behavior recognition technology of the next generation</cite></div>
+		<div class="logo"><h1>Cleversys Inc</h1><cite class="cite">behavior recognition technology of the next generation</cite></div>
 </div>
 		

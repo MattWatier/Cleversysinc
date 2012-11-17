@@ -14,7 +14,7 @@
 	$image_link = $item_image["sizes"]["bones-thumb-300"];
 
 	if( $item_image == false || $image_link == "" ){ 
-	$image_link = "http://placehold.it/300x150/333333/ffffff";
+	$image_link = "http://placehold.it/300x150/333333/ffffff&text=".$item_title;
 	}
 
 	$item= "";

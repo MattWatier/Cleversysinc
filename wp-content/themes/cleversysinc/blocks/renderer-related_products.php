@@ -14,7 +14,6 @@ function related_products($postid){
 		
 		$group = strip_tags( $tax );
 		if($group == 'CRO/Research Services'){$group ="Services";}
-		echo $group;
 		//make a grouped list of item vars
 		switch ($group) {
 			case 'Software':

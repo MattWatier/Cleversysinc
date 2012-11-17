@@ -4213,7 +4213,7 @@ div.logo {
   margin: -55px 0 14px 21px;
 }
 /* line 238, ../sass/app.scss */
-div.logo cite {
+div.logo cite, div.logo .cite {
   text-indent: -2000px;
   display: block;
 }
@@ -4478,13 +4478,18 @@ footer .panel.callout .button-bar .button {
 }
 
 /* line 461, ../sass/app.scss */
+div.orbit-wrapper div.slider-nav span {
+  top: 75%;
+}
+
+/* line 465, ../sass/app.scss */
 .toplink {
   display: block;
   height: 30px;
   vertical-align: middle;
   text-align: right;
 }
-/* line 466, ../sass/app.scss */
+/* line 470, ../sass/app.scss */
 .toplink .icon {
   margin-top: -5px;
   -moz-border-radius-topleft: 5px;
@@ -4501,12 +4506,12 @@ footer .panel.callout .button-bar .button {
   border-bottom-right-radius: 5px;
   background-color: rgba(66, 98, 137, 0.8);
 }
-/* line 474, ../sass/app.scss */
+/* line 478, ../sass/app.scss */
 .toplink:hover .icon {
   background-color: #426289;
 }
 
-/* line 478, ../sass/app.scss */
+/* line 482, ../sass/app.scss */
 .icon {
   margin: 0 10px;
   width: 30px;
