@@ -16,7 +16,7 @@ taxonomy-shoes.php
 <?php get_header(); ?>
 			
 			<div id="content" class="clearfix row">
-			
+			<!-- TAXONOMY CUSTOM -->
 				<div id="main" class="eight columns clearfix" role="main">
 				
 					<h1 class="archive_title h2">hardware<span><?php _e("Posts Categorized:", "bonestheme"); ?></span> <?php single_cat_title(); ?></h1>

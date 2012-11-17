@@ -108,6 +108,11 @@
                               </div>
                         </li> 
                     </ul>
+                    <? include 'blocks/renderer-related_products.php';
+
+                      $related_products = related_products($postID);
+                      echo $related_products;
+                    ?>  
 				</div> <!-- end sidebar -->
 			</div> <!-- end #content -->
 <div class="row">

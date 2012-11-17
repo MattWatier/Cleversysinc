@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 			
 			<div id="content" class="clearfix row">
-				<!-- ARCHIVE -->
+				<!-- TAX ARCHIVE -->
 				<div id="main" class="eight columns clearfix">
-				
+					
 					<?php if (is_category()) { ?>
 						<div class="panel archive_category">
 						<h1 class=""><span style="font-size:.5em;display:block;">Results for:</span> <span><?php _e("Posts Categorized:", "bonestheme"); ?></span> <?php single_cat_title(); ?></h1>

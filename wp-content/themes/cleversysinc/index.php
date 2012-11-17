@@ -1,8 +1,8 @@
 <?php get_header(); ?>
-			
+			<!--  INDEX.PHP  -->
 			<div id="content">
 			
-				<div id="main" class="eight columns clearfix" role="main">
+				<div id="main" class="eight columns clearfix">
 
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					

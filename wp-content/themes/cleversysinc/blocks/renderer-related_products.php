@@ -3,23 +3,38 @@
 function related_products($postid){
 	$fields = get_field('related_products', $postid);
 	$item = '<div class="panel"><h4>Related Products</h4><ul>';
+		$itemSoftware="";
+		$itemHardware="";
+		$itemServices="";
 	foreach ($fields as $post) {
-		print_r($post);
-		$type = $post->post_title;
+	
+		$title = $post->post_title;
 		$link = $post->guid;
-		$obj = get_post_type_object($post->post_type);
-		$args=array(
-			'name' => $post->post_type
-			);
-		$tax = get_taxonomies( $args);
+		$tax = get_the_term_list( $post->ID, 'custom_product_cat' , '', ', ', '' );
+		
+		$group = strip_tags( $tax );
+		if($group == 'CRO/Research Services'){$group ="Services";}
+		echo $group;
+		//make a grouped list of item vars
+		switch ($group) {
+			case 'Software':
+				$itemSoftware .= '<li class="'.$group.'" >'.$tax.' > <a href="'.$link.'">'.$title.'</a></li>';
+				break;
+			case 'Services':
+				$itemServices .= '<li class="'.$group.'" >'.$tax.' > <a href="'.$link.'">'.$title.'</a></li>';
+				break;
+			case 'Hardware':
+				$itemHardware .= '<li class="'.$group.'" >'.$tax.' > <a href="'.$link.'">'.$title.'</a></li>';
+				break;
+			default:
+				# code...
+				break;
+		}
 
-		print_r( $tax );
-		$item .= <<<BLOCK
-			<li><a href="#">link</a></li>
-BLOCK;
 	}
+	$item .= $itemSoftware.$itemHardware.$itemServices;
 	$item .= '</ul></div>';
 	return $item;
 
-}
+	}
 ?>
