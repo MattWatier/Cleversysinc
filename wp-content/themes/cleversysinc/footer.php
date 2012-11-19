@@ -20,8 +20,9 @@
 		<h5 >Contact Us Directly</h5>
 		
 		<p class="column six"> 11425 Isaac Newton Square - Suite 202 <br> Reston, VA 20190</p>
-		<p class="column six">Phone: <span class="phone">(703) 787 6946</span><br>
+		<p class="column six">Tel: <span class="phone">(703) 787 6946</span><br>
 		Fax: <span class="fax">(703) 757 7467</span></p>
+		<p class="column twelve" style="text-align:center;">CleverSys, Inc. © 2010</p>
 	</div>
 </div>
 
