@@ -2,6 +2,7 @@
 
 function related_products($postid){
 	$fields = get_field('related_products', $postid);
+	$baselink = get_bloginfo( 'wpurl' );
 	$item = '<div class="panel"><h4>Related Products</h4><ul>';
 		$itemSoftware="";
 		$itemHardware="";
@@ -9,7 +10,7 @@ function related_products($postid){
 	foreach ($fields as $post) {
 	
 		$title = $post->post_title;
-		$link = $post->guid;
+		$link = $baselink.'/?post_type=csi_products&p='.$post->ID;
 		$tax = get_the_term_list( $post->ID, 'custom_product_cat' , '', ', ', '' );
 		
 		$group = strip_tags( $tax );
@@ -33,6 +34,7 @@ function related_products($postid){
 	}
 	$item .= $itemSoftware.$itemHardware.$itemServices;
 	$item .= '</ul></div>';
+	if($fields == ""){$item = '';}
 	return $item;
 
 	}

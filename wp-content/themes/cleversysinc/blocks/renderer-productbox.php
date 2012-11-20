@@ -12,7 +12,7 @@
 	$item_type = $prodcutItem->post_type;
 	$item_image = get_field("featured_image",$item_ID);
 	$image_link = $item_image["sizes"]["bones-thumb-300"];
-
+	$baselink = get_bloginfo( 'wpurl' );
 	if( $item_image == false || $image_link == "" ){ 
 	$image_link = "http://placehold.it/300x150/333333/ffffff&text=".$item_title;
 	}

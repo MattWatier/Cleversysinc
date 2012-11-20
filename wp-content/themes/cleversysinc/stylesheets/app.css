@@ -4385,153 +4385,167 @@ footer .panel.callout .button-bar .button {
 /* line 363, ../sass/app.scss */
 .page .sidebar .support .content h5, .post .sidebar .support .content h5, .single .sidebar .support .content h5 {
   margin: .25em 0 .15em 0;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: bold;
 }
 /* line 370, ../sass/app.scss */
 .page .sidebar .support .content P .tel, .page .sidebar .support .content P a, .post .sidebar .support .content P .tel, .post .sidebar .support .content P a, .single .sidebar .support .content P .tel, .single .sidebar .support .content P a {
   text-decoration: underline;
 }
+/* line 374, ../sass/app.scss */
+.page .sidebar .support p, .post .sidebar .support p, .single .sidebar .support p {
+  margin-bottom: 0;
+}
+/* line 375, ../sass/app.scss */
+.page .sidebar .support p .tel, .page .sidebar .support p a, .post .sidebar .support p .tel, .post .sidebar .support p a, .single .sidebar .support p .tel, .single .sidebar .support p a {
+  text-decoration: underline;
+}
 
-/* line 379, ../sass/app.scss */
+/* line 381, ../sass/app.scss */
 .home .main, .contact .main {
   width: 50%;
 }
-/* line 384, ../sass/app.scss */
+/* line 386, ../sass/app.scss */
 .home .main article, .contact .main article {
   margin: 0;
 }
-/* line 388, ../sass/app.scss */
+/* line 390, ../sass/app.scss */
 .home .sidebar, .contact .sidebar {
   width: 50%;
 }
-/* line 391, ../sass/app.scss */
-.home .sidebar .support img, .contact .sidebar .support img {
-  width: 33.33333%;
-}
-/* line 392, ../sass/app.scss */
-.home .sidebar .support .content, .contact .sidebar .support .content {
-  width: 66.66667%;
-}
 /* line 393, ../sass/app.scss */
+.home .sidebar .support img, .contact .sidebar .support img {
+  width: 25%;
+  margin: 0 -13px;
+  width: 31%;
+}
+/* line 394, ../sass/app.scss */
+.home .sidebar .support .content, .contact .sidebar .support .content {
+  width: 75%;
+}
+/* line 395, ../sass/app.scss */
 .home .sidebar .support .content h3, .contact .sidebar .support .content h3 {
   font-weight: normal;
   font-size: 37px;
   margin-top: 5px;
   margin-bottom: 0px;
 }
-/* line 399, ../sass/app.scss */
+/* line 401, ../sass/app.scss */
 .home .sidebar .support .content h5, .contact .sidebar .support .content h5 {
   margin: .25em 0 .15em 0;
-  font-size: 23px;
+  font-size: 20px;
 }
-/* line 405, ../sass/app.scss */
+/* line 407, ../sass/app.scss */
+.home .sidebar .support .content P p, .contact .sidebar .support .content P p {
+  margin-bottom: 0;
+}
+/* line 408, ../sass/app.scss */
 .home .sidebar .support .content P .tel, .home .sidebar .support .content P a, .contact .sidebar .support .content P .tel, .contact .sidebar .support .content P a {
   text-decoration: underline;
 }
 
-/* line 416, ../sass/app.scss */
+/* line 419, ../sass/app.scss */
 .csi-products .main {
   width: 58.33333%;
 }
-/* line 418, ../sass/app.scss */
+/* line 421, ../sass/app.scss */
 .csi-products .main article {
   margin: 0;
 }
-/* line 420, ../sass/app.scss */
+/* line 423, ../sass/app.scss */
 .csi-products .main article header {
   width: 100%;
 }
-/* line 421, ../sass/app.scss */
+/* line 424, ../sass/app.scss */
 .csi-products .main article section {
   width: 100%;
 }
-/* line 427, ../sass/app.scss */
+/* line 430, ../sass/app.scss */
 .csi-products .sidebar {
   width: 41.66667%;
 }
-/* line 430, ../sass/app.scss */
+/* line 433, ../sass/app.scss */
 .csi-products .sidebar .behaviors h5 {
   font-size: 1em;
   font-weight: 900;
   color: #426289;
 }
-/* line 433, ../sass/app.scss */
+/* line 436, ../sass/app.scss */
 .csi-products .sidebar .behaviors ul {
   margin: 0 -15px;
   list-style: none;
 }
-/* line 437, ../sass/app.scss */
+/* line 440, ../sass/app.scss */
 .csi-products .sidebar .behaviors ul li {
   margin: 0 auto !important;
   width: 33.33333%;
   float: right;
 }
-/* line 447, ../sass/app.scss */
+/* line 450, ../sass/app.scss */
 .csi-products .sidebar .accordion h6 {
   font-size: .95em;
   font-weight: 900;
   color: grey;
 }
-/* line 451, ../sass/app.scss */
+/* line 454, ../sass/app.scss */
 .csi-products .sidebar .accordion ul {
   list-style-type: disc;
   font-size: .9em;
 }
-/* line 457, ../sass/app.scss */
+/* line 460, ../sass/app.scss */
 .csi-products .sidebar h5, .csi-products .sidebar .title {
   font-size: 1em;
   font-weight: 900;
   color: #426289;
 }
-/* line 460, ../sass/app.scss */
+/* line 463, ../sass/app.scss */
 .csi-products .sidebar ul {
   list-style: none;
   font-size: .9em;
 }
-/* line 464, ../sass/app.scss */
+/* line 467, ../sass/app.scss */
 .csi-products .sidebar ul li {
   line-height: 1.4em;
   margin-bottom: .7em;
 }
-/* line 471, ../sass/app.scss */
+/* line 474, ../sass/app.scss */
 .csi-products table.dimensions {
   border: 1px solid #e0e0e0;
   width: 100%;
 }
-/* line 474, ../sass/app.scss */
+/* line 477, ../sass/app.scss */
 .csi-products table.dimensions thead {
   background-color: #83a0c3;
   font-weight: 900;
 }
-/* line 475, ../sass/app.scss */
+/* line 478, ../sass/app.scss */
 .csi-products table.dimensions thead td {
   padding: .5em;
 }
-/* line 479, ../sass/app.scss */
+/* line 482, ../sass/app.scss */
 .csi-products table.dimensions .odd {
   background-color: #ececec;
 }
 
-/* line 486, ../sass/app.scss */
+/* line 489, ../sass/app.scss */
 #tumblelog .item a:hover .panel {
   border-top-color: #b22825;
   background-color: #d6dfeb;
 }
 
-/* line 493, ../sass/app.scss */
+/* line 496, ../sass/app.scss */
 div.orbit-wrapper div.slider-nav span {
   top: 75%;
 }
 
-/* line 497, ../sass/app.scss */
+/* line 500, ../sass/app.scss */
 .toplink {
   display: block;
   height: 30px;
   vertical-align: middle;
   text-align: right;
 }
-/* line 502, ../sass/app.scss */
+/* line 505, ../sass/app.scss */
 .toplink .icon {
   margin-top: -5px;
   -moz-border-radius-topleft: 5px;
@@ -4548,12 +4562,12 @@ div.orbit-wrapper div.slider-nav span {
   border-bottom-right-radius: 5px;
   background-color: rgba(66, 98, 137, 0.8);
 }
-/* line 510, ../sass/app.scss */
+/* line 513, ../sass/app.scss */
 .toplink:hover .icon {
   background-color: #426289;
 }
 
-/* line 514, ../sass/app.scss */
+/* line 517, ../sass/app.scss */
 .icon {
   margin: 0 10px;
   width: 30px;
@@ -4565,7 +4579,7 @@ div.orbit-wrapper div.slider-nav span {
   text-indent: -3000px;
 }
 
-/* line 525, ../sass/app.scss */
+/* line 528, ../sass/app.scss */
 .clear {
   clear: both;
 }

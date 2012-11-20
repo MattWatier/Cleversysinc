@@ -42,71 +42,39 @@
 					</article> <!-- end article -->
 				</div> <!-- end #main -->
 				<div class="sidebar">
-					<div class="panel callout"> 
-						<h3>Documents</h3>
 						<? 
-						$items ="";
-						$field = get_field("documents");
-						foreach($field as $document){
-							$items .= '<p>'.$document["name_of_document"].'</p>';
-							$items .= '<a href="'.$document["link_to_document"] .'" class="button">Download PDF</a>';
-						}
-						echo $items;
+            include 'blocks/block-document.php'; 
+            include 'block-detectable_behaviors.php';
 						?>
-					</div> <!-- end .panel -->
-                    <div class="panel behaviors">
-                               <h5>Detectable Behaviors</h5>
-                                <?php 
-                                $detectable_behaviors = wp_get_object_terms( get_the_ID() , 'behaviors');
-                                
-                                if(!empty($detectable_behaviors)){
-                                  if(!is_wp_error( $detectable_behaviors )){
-                                    echo '<ul>';
-                                    foreach($detectable_behaviors as $term){
-                                      echo '<li><a href="'.get_term_link($term->slug, 'behaviors').'">'.$term->name.'</a></li>'; 
-                                    }
-                                    echo '</ul>';
-                                  }
-                                } ?>
-                            </div> 
+					         
                     
                     <ul class="accordion">
-                        <li class="active" >
-                              <div class="title">
-                                <h5>Applications</h5>
-                              </div>
-                              <div class="content">
-                                 <? $field = get_field("application");  echo $field;?>
-                              </div>
-                        </li>
-                        <li>
-                              <div class="title">
-                                <h5>Unique Capablities</h5>
-                              </div>
-                              <div class="content">
-                                 <? $field = get_field("unique_capabilities");echo $field; ?>
-                              </div>
-                        </li>   
-                        <li>
-                              <div class="title">
-                                <h5>Results</h5>
-                              </div>
-                              <div class="content">
-                                <? $field = get_field("results");echo $field; ?>
-                              </div>
-                        </li> 
-                        <li>
-                              <div class="title">
-                                <h5>Requirements &amp; Production Options</h5>
-                              </div>
-                              <div class="content">
-                                  <h6>Requirements</h6>
-                                  <div><? $field = get_field("requirements");  echo $field;?></div>                                  
-                                  <hr>
-                                  <h6>Production Options</h6>
-                                  <div><? $field = get_field("product_options");  echo $field;?></div>
-                              </div>
-                        </li> 
+                        <? $field = get_field("application");
+                            if($field != ""){
+                                echo '<li class="active" > <div class="title"> <h5>Applications</h5></div><div class="content">'.$field.'</div></li>';
+                              }
+                            $field = get_field("unique_capabilities");
+                            if($field != ""){
+                                 echo '<li><div class="title"><h5>Unique Capablities</h5> </div><div class="content">'.$field.'</div></li>'; 
+                              } 
+                            $field = get_field("results");
+                             if($field !=''){
+                                echo'<li><div class="title"><h5>Results</h5></div><div class="content">'.$field.'</div></li>';
+                             } 
+                            $field_r = get_field("requirements");
+                            $field_p = get_field("product_options");  
+                            if($field_r !='' && $field_p != ''){
+                              $item = '<li><div class="title"><h5>Requirements &amp; Production Options</h5></div><div class="content">';
+                              if($field_r != ""){
+                                $item .= '<h6>Requirements</h6><div>'.$field_r.'</div>';
+                              }
+                              if($field_p != ""){
+                                $item .= '<h6>Production Options</h6><div>'.$field_p.'</div>';
+                              }
+                              $item .='</div></li>';
+                              echo $item;
+                            } 
+                         ?>
                     </ul>
                     <? include 'blocks/renderer-related_products.php';
 

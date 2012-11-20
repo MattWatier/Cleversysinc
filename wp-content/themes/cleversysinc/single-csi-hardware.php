@@ -34,11 +34,11 @@
                                  ?>
                             </div>
                             <div>
-                            	<h4>Discription</h4>
+                            	<h4>Description</h4>
 								<?php the_content();
 								 $postID = get_the_ID();?>
                             </div>
-	                       <h4>Dimentions</h4>
+	                       <h4>Dimensions</h4>
                        		<? $field = get_field("dimenstions");
                        			$bool = true;
                        			$items = "";
@@ -61,41 +61,13 @@
 					</article> <!-- end article -->
 				</div> <!-- end #main -->
 				<div class="sidebar">
-					<div class="panel callout"> 
-						<h3>Documents</h3>
-						<? 
-							$items ="";
-							$field = get_field("documents");
-							foreach($field as $document){
-
-								$items .= '<p>'.$document["name_of_document"].'</p>';
-								$items .= '<a target="_blank" href="'.$document["link_to_document"] .'" class="button">Download PDF</a>';
-								}
-							echo $items;
-						?>
-					</div> <!-- end .panel -->
-					
 						<?php 
-							$field  = get_field('extra_photos');
-							if($field != NULL || $field != ""){
-								$items ='<div><h5 class="title">Images</h5><ul class="block-grid three-up" data-clearing>';
-								foreach ($field as $image) {
-									$image = $image["image"];
-									$items .= '<li><a href="'.$image["sizes"]["wpf-featured"].'"><img src="'.$image["sizes"]["thumbnail"].'" data-caption="'.$image["caption"].'"></a></li>';
-								}
-								$items .= "</ul></div>";
-								echo $items;
-							}
-						?>
-					<? include 'blocks/renderer-related_products.php';
-
+						include 'blocks/block-document.php'; 
+						include 'block-extra_images.php';
+						include 'blocks/renderer-related_products.php';
 						$related_products = related_products($postID);
 						echo $related_products;
-					?>	
-                    <div class="panel">
-                       <h5 class="title">Behavior Recognition</h5>
-                       		<? $field = get_field("behavior_recognition");  echo $field;?>
-                    </div> 
+	                    include 'block-behavior_recognition.php'; ?>	
 				</div> <!-- end sidebar -->
 			</div> <!-- end #content -->
 
