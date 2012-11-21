@@ -27,7 +27,11 @@
           
           
           <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
-
+                                <? $field = get_field("featured_image");
+                                  if($field!=''){
+                                  $items = ' <div class=" panel"><img style="margin:0 auto;display:block;" src="'.$field["sizes"]["wpf-featured"].'" alt="'.$field["caption"].'"></div>';
+                                  echo $items;}
+                                 ?>
 
 						<section class="post_content clearfix">
                <div class="row">
