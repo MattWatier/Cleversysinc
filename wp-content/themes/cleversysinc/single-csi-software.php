@@ -48,7 +48,8 @@
 				<div class="sidebar">
 						<? 
             include 'blocks/block-document.php'; 
-            include 'block-detectable_behaviors.php';
+            include "blocks/block-extra_images.php";
+            include 'blocks/block-detectable_behaviors.php';
 						?>
 					         
                     

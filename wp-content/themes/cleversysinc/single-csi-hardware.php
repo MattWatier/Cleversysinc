@@ -65,7 +65,7 @@
 				<div class="sidebar">
 						<?php 
 						include 'blocks/block-document.php'; 
-						include 'block-extra_images.php';
+						include 'blocks/block-extra_images.php';
 						include 'blocks/renderer-related_products.php';
 						$related_products = related_products($postID);
 						echo $related_products;
