@@ -192,7 +192,27 @@ function custom_post_example2() {
    		'show_ui' => true,
    		'query_var' => true,
    	)
-   );   
+ );   
+
+// CREATE COLUMNS IN CUSTOM POST TYPE LISTING
+
+add_filter( 'manage_edit-csi_products_columns', 'my_columns' );
+
+function my_columns( $columns ) {
+        $columns['custom_product_cat'] = 'Type';
+		unset( $columns['comments'] );
+return $columns;
+}
+add_action( 'manage_posts_custom_column', 'populate_columns' );
+
+function populate_columns( $column ) 
+{
+                     if ( 'custom_product_cat' == $column ) {
+                     		$products_type =  wp_get_post_terms( get_the_ID(),'custom_product_cat', array("fields" => "names") ) ;
+                            echo $products_type[0];
+                         } 
+
+ } 
     
 
 ?>

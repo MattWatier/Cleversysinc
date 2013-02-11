@@ -43,7 +43,7 @@ BLOCK;
 			<img alt="$item_title $item_type" src="$image_link">
 			<h2 class="title">$item_title</h2>
 			<p class="column">$item_excerpt</p>
-			<a href="/Cleversys/?$item_type=$item_slug" class="button" title="learn more about $item_title">Learn More »</a>
+			<a href="/CleverSysInc/?$item_type=$item_slug" class="button" title="learn more about $item_title">Learn More »</a>
 			</div>
 			</div>
 BLOCK;
