@@ -26,14 +26,13 @@
 						
 
 						<section class="post_content clearfix">
-                           
+                            <div class=" panel">
                                 
                                 <? $field = get_field("featured_image");
-                                	if($field!=''){
-                                	$items = ' <div class=" panel"><img style="margin:0 auto;display:block;" src="'.$field["sizes"]["wpf-featured"].'" alt="'.$field["caption"].'"></div>';
-                                	echo $items;}
+                                	$items = '<img style="margin:0 auto;display:block;" src="'.$field["sizes"]["wpf-featured"].'" alt="'.$field["caption"].'">';
+                                	echo $items;
                                  ?>
-                            
+                            </div>
                             <div>
                             	<h4>Description</h4>
 								<?php the_content();
@@ -41,7 +40,6 @@
                             </div>
 	                       <h4>Dimensions</h4>
                        		<? $field = get_field("dimenstions");
-                       		if($field != ''){
                        			$bool = true;
                        			$items = "";
                        			$items .= "<table cellspacing='0' cellpadding='0' class='dimensions'><thead><td>item</td><td>width</td><td>length</td><td>height</td><td>animal</td></thead><tbody>";
@@ -54,7 +52,7 @@
 
                        			endforeach;
                        			$items .= '</tbody></table>';
-                       			echo $items;}
+                       			echo $items;
                        		?>                            
 						</section> <!-- end article section -->
 						
@@ -65,7 +63,7 @@
 				<div class="sidebar">
 						<?php 
 						include 'blocks/block-document.php'; 
-						include 'blocks/block-extra_images.php';
+						include 'block-extra_images.php';
 						include 'blocks/renderer-related_products.php';
 						$related_products = related_products($postID);
 						echo $related_products;

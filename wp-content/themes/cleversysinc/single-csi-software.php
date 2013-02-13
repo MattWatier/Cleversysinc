@@ -27,11 +27,7 @@
           
           
           <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
-                                <? $field = get_field("featured_image");
-                                  if($field!=''){
-                                  $items = ' <div class=" panel"><img style="margin:0 auto;display:block;" src="'.$field["sizes"]["wpf-featured"].'" alt="'.$field["caption"].'"></div>';
-                                  echo $items;}
-                                 ?>
+
 
 						<section class="post_content clearfix">
                <div class="row">
@@ -48,21 +44,15 @@
 				<div class="sidebar">
 						<? 
             include 'blocks/block-document.php'; 
-            include "blocks/block-extra_images.php";
-            include 'blocks/block-detectable_behaviors.php';
+            include 'block-detectable_behaviors.php';
 						?>
 					         
                     
                     <ul class="accordion">
-                        <?  $field = get_field("features");
-                            if($field != ""){
-                                 echo '<li><div class="title"><h5>Features</h5> </div><div class="content">'.$field.'</div></li>'; 
-                              } 
-                            $field = get_field("application");
+                        <? $field = get_field("application");
                             if($field != ""){
                                 echo '<li class="active" > <div class="title"> <h5>Applications</h5></div><div class="content">'.$field.'</div></li>';
                               }
-                           
                             $field = get_field("unique_capabilities");
                             if($field != ""){
                                  echo '<li><div class="title"><h5>Unique Capablities</h5> </div><div class="content">'.$field.'</div></li>'; 

@@ -1,5 +1,5 @@
 /*
- * jQuery Foundation Tooltip Plugin 2.0.1
+ * jQuery Foundation Tooltip Plugin 2.0
  * http://foundation.zurb.com
  * Copyright 2012, ZURB
  * Free to use under the MIT license.
@@ -23,22 +23,22 @@
           self = this;
 
         if (Modernizr.touch) {
-          $body.on('click.tooltip touchstart.tooltip touchend.tooltip', settings.targetClass, function (e) {
+          $body.delegate(settings.targetClass, 'click.tooltip touchstart.tooltip touchend.tooltip', function (e) {
             e.preventDefault();
             var $this = $(this);
             $(settings.tooltipClass).hide();
             methods.showOrCreateTip($this);
           });
-          $(settings.tooltipClass).on('click.tooltip touchstart.tooltip touchend.tooltip', function (e) {
+          $(settings.tooltipClass).live('click.tooltip touchstart.tooltip touchend.tooltip', function (e) {
             e.preventDefault();
             $(this).fadeOut(150);
           });
         } else {
-          $body.on('mouseover.tooltip mouseout.tooltip', settings.targetClass, function (e) {
+          $body.delegate(settings.targetClass, 'mouseover.tooltip mouseout.tooltip', function (e) {
             var $this = $(this);
-            if (e.type === 'mouseover') {
+            if (e.type == 'mouseover') {
               methods.showOrCreateTip($this);
-            } else if (e.type === 'mouseout') {
+            } else if (e.type == 'mouseout') {
               methods.hide($this);
             }
           });
@@ -145,8 +145,8 @@
     },
     destroy : function () {
       return this.each(function () {
-        $(window).off('.tooltip');
-        $(settings.targetClass).off('.tooltip');
+        $(window).unbind('.tooltip');
+        $(settings.targetClass).unbind('.tooltip');
         $(settings.tooltipClass).each(function(i) {
           $($(settings.targetClass).get(i)).attr('title', $(this).text());
         }).remove();

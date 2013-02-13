@@ -20,7 +20,7 @@
 	$item= "";
 
 
-/*	$item .= <<<BLOCK
+	$item .= <<<BLOCK
 			<div class="prodcut_item revealer">
 			<div class="reveal-holder">
 			<img alt="$item_title $item_type" src="$image_link">
@@ -29,26 +29,11 @@
 			<div class="reveal-slide">
 			<h2 class="title">$item_title</h2>
 			<p class="column">$item_excerpt</p>
-			<a href="/Cleversys/?$item_type=$item_slug" class="button" title="learn more about $item_title">Learn More »</a>
+			<a href="/?$item_type=$item_slug" class="button" title="learn more about $item_title">Learn More »</a>
 			</div>
 			<div class="toggle"><span class="icon">toggle</span></div>
 			</div>
 BLOCK;
-*/
-
-
-	$item .= <<<BLOCK
-			<div class="prodcut_item revealer">
-			<div class="reveal-holder">
-			<img alt="$item_title $item_type" src="$image_link">
-			<h2 class="title">$item_title</h2>
-			<p class="column">$item_excerpt</p>
-			<a href="/CleverSysInc/?$item_type=$item_slug" class="button" title="learn more about $item_title">Learn More »</a>
-			</div>
-			</div>
-BLOCK;
-
-
 
 			return $item;
 	}
