@@ -1,57 +1,55 @@
-// Global Foundation Settings
-@import "settings";
-
-// Comment out this import if you are customizing you imports below
-@import "foundation";
- @import "compass/css3";
-
-
-// Import specific parts of Foundation by commenting the import "foundation"
-// and uncommenting what you want below. You must uncomment the following if customizing
-
-// @import "foundation/foundation-global"; // *always required
-// @import "foundation/components/global"; // *always required
-// @import "foundation/components/grid";
-// @import "foundation/components/visibility";
-// @import "foundation/components/block-grid";
-// @import "foundation/components/type";
-// @import "foundation/components/buttons";
-// @import "foundation/components/forms"; // *requires components/buttons
-// @import "foundation/components/custom-forms"; // *requires components/buttons, components/forms
-// @import "foundation/components/button-groups"; // *requires components/buttons
-// @import "foundation/components/dropdown-buttons"; // *requires components/buttons
-// @import "foundation/components/split-buttons"; // *requires components/buttons
-// @import "foundation/components/flex-video";
-// @import "foundation/components/section";
-// @import "foundation/components/top-bar";  // *requires components/grid
-// @import "foundation/components/orbit";
-// @import "foundation/components/reveal";
-// @import "foundation/components/joyride";
-// @import "foundation/components/clearing";
-// @import "foundation/components/alert-boxes";
-// @import "foundation/components/breadcrumbs";
-// @import "foundation/components/keystrokes";
-// @import "foundation/components/labels";
-// @import "foundation/components/inline-lists";
-// @import "foundation/components/pagination";
-// @import "foundation/components/panels";
-// @import "foundation/components/pricing-tables";
-// @import "foundation/components/progress-bars";
-// @import "foundation/components/side-nav";
-// @import "foundation/components/sub-nav";
-// @import "foundation/components/switch";
-// @import "foundation/components/magellan";
-// @import "foundation/components/tables";
-// @import "foundation/components/thumbs";
-// @import "foundation/components/tooltips";
-// @import "foundation/components/dropdown";
-
 $blue:#426289;
 $blue-dark:#2c394c;
 $blue-light:#576781;
 $red:#b22825;
 $red-dark:#6d1210;
 $grey:#e0e0e0;
+// You custom settings file to override Foundation defaults
+@import "settings";
+
+// Comment out this import if you are customizing you imports below
+// @import "foundation";
+@import "foundation/mixins/respond-to";
+ @import "compass/css3";
+ @import "foundation/settings";
+ @import "foundation/functions/all";
+ @import  "foundation/common/globals";
+ @import "foundation/mixins/clearfix";
+ @import "modular-scale";
+ 
+ // Control which mixins you have access too
+@import "compass/css3/border-radius";
+
+ @import "foundation/mixins/css-triangle";
+ @import "foundation/mixins/font-size";
+
+// Must include next two for semantic grid to work
+
+ 
+ @import "foundation/mixins/semantic-grid";
+
+// Must include the grid for any responsiveness
+
+ @import "foundation/components/grid";
+
+// Control which common styles get compiled
+
+ @import "foundation/common/typography";
+ @import "foundation/common/forms";
+
+// Control which components you get if customizing
+
+@import "foundation/components/modules/buttons";
+@import "foundation/components/modules/tabs";
+@import "foundation/components/modules/ui";
+@import "foundation/components/modules/orbit";
+@import "foundation/components/modules/reveal";
+ @import "foundation/components/modules/offcanvas";
+@import "foundation/components/modules/clearing";
+// @import "foundation/components/modules/navbar";
+
+// objects in cleversys
+@import "_revealer";
 
 
 @import "my-icons/*.png";
@@ -126,7 +124,7 @@ $grey:#e0e0e0;
     margin:-20px 0;
     padding:15px;
     background:url("../images/Panel1.jpg") #fff center center no-repeat;
-    @include box-shadow(#555, 0px, 0px, 6px, 0px);
+    @include single-box-shadow(#555, 0px, 0px, 6px, 0px);
     h1{color:white;} 
     }
   
@@ -343,25 +341,19 @@ footer{
 }}
 .page, .post, .single{
   .fullwidth{
-  @extend .columns; 
-  @extend .large-twelve;
-  
+    @include column(12);
   }
   .main{
-         @extend .columns; 
-  @extend .large-seven;
+        @include column(7);
         article{
-              
+            @include innerRow(collapse);  
         }
     }
   .sidebar{
-         @extend .columns; 
-  @extend .large-five;
+        @include column(5);
      .support{
-      img{@extend .columns; 
-  @extend .large-four;}
-      .content{   @extend .columns; 
-  @extend .large-eight;
+      img{@include column(4);}
+      .content{  @include column(8);
             h3{
                 font-weight: normal;
                 font-size: 33px;
@@ -387,25 +379,19 @@ footer{
 }
 .home, .contact{
    .main{
-         @extend .columns; 
-  @extend .large-six;
+        @include column(6);
         form{
 
         }
         article{
-            
+            @include innerRow(collapse);  
         }
     }
   .sidebar{
-         @extend .columns; 
-  @extend .large-six;
+        @include column(6);
      .support{
-      img{
- @extend .columns; 
-  @extend .large-three;
-      margin: 0 -13px;width: 31%;}
-      .content{   @extend .columns; 
-  @extend .large-nine;
+      img{@include column(3);margin: 0 -13px;width: 31%;}
+      .content{  @include column(9);
        h3{
         font-weight: normal;
         font-size: 37px;
@@ -431,36 +417,28 @@ footer{
 
 .csi-products{
     .main{
-         @extend .columns; 
-  @extend .large-seven;
+        @include column(7);
         article{
-             @extend .row; 
- 
-            header{
-             @extend .columns; 
-  @extend .large-twelve;
-            }
+            @include innerRow(collapse); 
+            header{@include column(12);}
             section{
-                  @extend .columns; 
-  @extend .large-twelve;
+                 @include column(12);
                 }
         
         }
     }
     .sidebar{
-        @extend .columns; 
-  @extend .large-five;
+        @include column(5);
         .behaviors{
           h5{ font-size: 1em;
             font-weight: 900;
             color: $blue;}
           ul{
-             @extend .row;
+            @include innerRow();
             list-style: none;
 
             li{
-               @extend .columns; 
-  @extend .large-four;
+              @include column(4, center);
               float: right;
             }
           }
