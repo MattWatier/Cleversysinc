@@ -46,8 +46,6 @@ add_image_size( 'wpf-featured', 639, 300, true );
 add_image_size ( 'wpf-home-featured', 970, 364, true );
 add_image_size( 'bones-thumb-600', 600, 150, false );
 add_image_size( 'bones-thumb-300', 300, 100, true );
-
-add_image_size( 'post-thumbnail', 300, 200, false );
 /* 
 to add more sizes, simply copy a line from above 
 and change the dimensions & name. As long as you

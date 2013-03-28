@@ -39,11 +39,11 @@
 								<?php the_content();
 								 $postID = get_the_ID();?>
                             </div>
-	                     
+	                       <h4>Dimensions</h4>
                        		<? $field = get_field("dimenstions");
-                       		    if( $field != false && count( $field) != 0){
+                       		if($field != ''){
                        			$bool = true;
-                       			$items = "<h4>Dimensions</h4>";
+                       			$items = "";
                        			$items .= "<table cellspacing='0' cellpadding='0' class='dimensions'><thead><td>item</td><td>width</td><td>length</td><td>height</td><td>animal</td></thead><tbody>";
                        			foreach($field as $dimenstion):
 									$items .= '<tr';

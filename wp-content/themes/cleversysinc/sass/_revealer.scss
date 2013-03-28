@@ -14,14 +14,13 @@ $revealer-padding:10px;
 .revealer{
 	$margin: 10px;
 	margin: 0 $margin $margin 0;
-	/* overflow: hidden; */
+	overflow: hidden;
 	position: relative;
 	width: $reveal-width;
-	/* height: $reveal-height; */
+	height: $reveal-height;
 	background-color: #ccc;
 	border:#999 1px solid;
 	float: left;
-	a.button{margin:0 0 15px 15px;}
 		.title{
 			font-size: ( $reveal-height - ($reveal-width/ 2) - 20px)  /3;
 			line-height:1.25em;
@@ -30,12 +29,12 @@ $revealer-padding:10px;
 			float: left;
 			}
 	.reveal-holder{
-		/*height: $reveal-height;*/
+		height: $reveal-height;
 		width: 100%;
 		position: relative;
 		img{
 			width: $reveal-width - 22px;
-			/* height: ($reveal-width - 22px) /2; */
+			height: ($reveal-width - 22px) /2;
 			margin: 10px;
 			position: relative;
 			border:#ddd 1px solid;

@@ -41,9 +41,9 @@ BLOCK;
 			<div class="prodcut_item revealer">
 			<div class="reveal-holder">
 			<img alt="$item_title $item_type" src="$image_link">
-			<h2 style="width:100%;display:block;float:none;"class="title">$item_title</h2>
-			<p style="width:100%;display:block;float:none;margin:10px;">$item_excerpt</p>
-			<a href="/CleverSysInc/?$item_type=$item_slug" class="button" title="learn more about $item_title">Learn More »</a>
+			<h2 class="title">$item_title</h2>
+			<p class="column">$item_excerpt</p>
+			<a href="?$item_type=$item_slug" class="button" title="learn more about $item_title">Learn More »</a>
 			</div>
 			</div>
 BLOCK;

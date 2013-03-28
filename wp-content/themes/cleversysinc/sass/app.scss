@@ -1,20 +1,529 @@
-/* Artfully masterminded by ZURB  */
+$blue:#426289;
+$blue-dark:#2c394c;
+$blue-light:#576781;
+$red:#b22825;
+$red-dark:#6d1210;
+$grey:#e0e0e0;
+// You custom settings file to override Foundation defaults
 @import "settings";
-@import "foundation";
 
-// Import Each Specific Piece for SASS
-// @import "foundation/base";
-// @import "foundation/globals";
-// @import "foundation/typography";
-// @import "foundation/grid";
-// @import "foundation/ui";
-// @import "foundation/buttons";
-// @import "foundation/tabs";
-// @import "foundation/navbar";
-// @import "foundation/forms";
-// @import "foundation/orbit";
-// @import "foundation/reveal";
-// @import "foundation/ie";
-// @import "foundation/app";
+// Comment out this import if you are customizing you imports below
+// @import "foundation";
+@import "foundation/mixins/respond-to";
+ @import "compass/css3";
+ @import "foundation/settings";
+ @import "foundation/functions/all";
+ @import  "foundation/common/globals";
+ @import "foundation/mixins/clearfix";
+ @import "modular-scale";
+ 
+ // Control which mixins you have access too
+@import "compass/css3/border-radius";
 
+ @import "foundation/mixins/css-triangle";
+ @import "foundation/mixins/font-size";
+
+// Must include next two for semantic grid to work
+
+ 
+ @import "foundation/mixins/semantic-grid";
+
+// Must include the grid for any responsiveness
+
+ @import "foundation/components/grid";
+
+// Control which common styles get compiled
+
+ @import "foundation/common/typography";
+ @import "foundation/common/forms";
+
+// Control which components you get if customizing
+
+@import "foundation/components/modules/buttons";
+@import "foundation/components/modules/tabs";
+@import "foundation/components/modules/ui";
+@import "foundation/components/modules/orbit";
+@import "foundation/components/modules/reveal";
+ @import "foundation/components/modules/offcanvas";
+@import "foundation/components/modules/clearing";
+// @import "foundation/components/modules/navbar";
+
+// objects in cleversys
+@import "_revealer";
+
+
+@import "my-icons/*.png";
+@include all-my-icons-sprites;
+
+
+
+/**** Isotope Filtering ****/
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:      -o-transform, opacity;
+          transition-property:         transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+      -ms-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
+}
+
+
+
+.panel.callout{
+    h1,h2,h3,h4,h5{color: scale-color($blue, $lightness: 90%);}
+
+}
+#banner{
+  display:block;
+  background-color:$blue;
+  margin:30px 0;
+  #image{
+    height:380px;
+    display:block;
+    border:1px #333 solid;
+    margin:-20px 0;
+    padding:15px;
+    background:url("../images/Panel1.jpg") #fff center center no-repeat;
+    @include single-box-shadow(#555, 0px, 0px, 6px, 0px);
+    h1{color:white;} 
+    }
+  
+}
+#top-header{
+  width: 100%;
+  display: block;
+  @include background(linear-gradient($blue-light,$blue-dark));
+  height: 40px;
+  border-bottom: 6px solid $red;
+  
+
+  #top-nav{
+    
+    .menu-main_nav-container{
+        float: left;
+        margin:5px;
+      }
+    .menu-utility_nav-container{
+        float: right;
+        margin:5px;
+      }
+    ul{
+      list-style: none;
+      li{
+        float: left;
+        display: inline-block;
+      
+        a{
+          color: white;
+          font-weight: normal;
+          padding: 3px 15px;
+          @include single-text-shadow(-1,-1,2,2,$blue-dark);
+        
+        }
+      }
+    }
+  } /*    End of top nav  */
+
+}
+#product_collection{
+  div#drop-down{
+    background-color:$red;
+    display:block;
+    width:100%;
+    margin:0px;
+    padding:0px;
+    #collapse-nav{
+      list-style:none;
+      margin:0x;
+      li{
+        padding: 10px 0;
+        margin-top: -1px;
+        border: none;
+        ul{list-style:none;
+          li {
+            height:2em;
+            float:left;
+            a{
+              color:white;}
+            }
+          }
+        &#blankTab{
+           margin:-10px;
+           height:0;
+           padding:0;
+           }
+        
+        }
+     }
+  }
+   dl.tabs{
+     border-bottom:none;
+     dt{float:right;color:#333;}
+    dd{
+      float:right;
+      background-color: $red;
+      margin-top: -5px;
+      &.active{
+        border-top:0px none;
+          margin-top: -5px;
+        a{
+          font-weight:normal;
+          border-left:0px none;
+          border-right:0px none;
+          color:white;
+          background-color:$red-dark;
+           margin-top:0px;
+         
+          }
+       }
+     a{
+        margin-top:0px;
+        color: white;
+        font-size: 14px;
+        height: 33px;
+        padding: 0px 10px;
+        text-decoration:none;
+        &:hover{text-decoration:underline;}
+     }
+    }
+  }
+}
+div.logo{
+  text-indent: -2000px;
+  background-image: url("../images/logo.jpg");
+  background-repeat: no-repeat;
+  height: 90px;
+  width: 270px;
+  margin: -55px 0 14px 21px;
+  cite, .cite{  text-indent: -2000px;display: block;}
+}
+
+#featuredContent{
+ 
+  h3, p,a{
+    color:#fff;
+    margin-left:30px;
+    clear:left;
+    float:left;
+    
+    }
+  h3{ margin-top:2em;
+  }
+  p{
+  margin-bottom:.5em;
+  }
+  a{
+    display:inline-block;
+    background-color:$red;
+    margin-left:0;
+    padding:5px 15px 5px 30px;
+  }
+}
+#featuredContent{
+  .dark{
+    h3, p{
+      color:#333;
+      }
+    }
+}
+.wrapper{
+  border: 1px solid #ccc;
+  padding: 10px 10px 0px;
+   @include box-shadow(#aaa 2px 2px 20px);
+  .orbit-wrapper{
+  margin-bottom: -6px;
+  }
+}
+#home-main{
+  margin-top:2em;
+  }
+#product-buckets{
+  background-color:$grey;
+  background: url(../images/grey-shadow.jpg) $grey top repeat-x;
+  padding: 20px 0;
+  ul{
+    list-style: none;
+   li + li{  border-left: 3px dotted #999;}
+    li{
+    
+      padding: 0 0 0 25px;
+      p{
+        padding: 0px 20px 0px 0px;}
+        }
+     }
+}
+footer{
+  padding: 1em;
+  background-color:$blue;
+  margin-top:1em;
+  ul{margin:15px;
+  list-style:none;
+  li{    a{color:white;}}
+ 
+  }
+  h5{
+    color: white;
+    border-bottom: 1px solid scale-color($blue, $lightness: 80%);
+    padding-bottom: .25em;
+    font-weight: 900;
+  }
+ .panel.callout{
+    @include border-radius(5px);
+    background-color:  scale-color($blue, $lightness: 20%);
+    border: scale-color($blue, $lightness:-20%);
+    height: 195px;
+    border: 5px #ACC8DB solid;
+    margin-top: 15px;
+      h5{
+        border-bottom: 1px solid scale-color($blue, $lightness: 80%);
+        padding-bottom: .25em;
+        font-weight: 900;
+      }
+      .button-bar{
+        .button{margin: .25em 1em;}
+        text-align:center;
+
+      }
+   }
+
+}
+.sidebar{ 
+    ul{
+      list-style: none;
+        li{
+            list-style: none;
+        }
+      }
+    }
+.Products{
+  ul li{
+  list-style: none;
+}}
+.page, .post, .single{
+  .fullwidth{
+    @include column(12);
+  }
+  .main{
+        @include column(7);
+        article{
+            @include innerRow(collapse);  
+        }
+    }
+  .sidebar{
+        @include column(5);
+     .support{
+      img{@include column(4);}
+      .content{  @include column(8);
+            h3{
+                font-weight: normal;
+                font-size: 33px;
+                margin-top: 5px;
+                margin-bottom: 0px;
+            }
+            h5{
+              margin: .25em 0 .15em 0;
+              font-size: 14px;
+              font-weight: bold;
+
+            }
+            P{
+              .tel, a{ text-decoration: underline;}
+            }
+
+          }
+          p{margin-bottom: 0;
+           .tel, a{ text-decoration: underline;}}
+
+        }
+       }
+}
+.home, .contact{
+   .main{
+        @include column(6);
+        form{
+
+        }
+        article{
+            @include innerRow(collapse);  
+        }
+    }
+  .sidebar{
+        @include column(6);
+     .support{
+      img{@include column(3);margin: 0 -13px;width: 31%;}
+      .content{  @include column(9);
+       h3{
+        font-weight: normal;
+        font-size: 37px;
+        margin-top: 5px;
+        margin-bottom: 0px;
+         }
+       h5{
+          margin: .25em 0 .15em 0;
+          font-size: 20px;
+
+        }
+    P{
+        p{margin-bottom: 0;}
+      .tel, a{ text-decoration: underline;}
+    }
+
+  }
+
+}
+       }
+
+}
+
+.csi-products{
+    .main{
+        @include column(7);
+        article{
+            @include innerRow(collapse); 
+            header{@include column(12);}
+            section{
+                 @include column(12);
+                }
+        
+        }
+    }
+    .sidebar{
+        @include column(5);
+        .behaviors{
+          h5{ font-size: 1em;
+            font-weight: 900;
+            color: $blue;}
+          ul{
+            @include innerRow();
+            list-style: none;
+
+            li{
+              @include column(4, center);
+              float: right;
+            }
+          }
+         
+        
+        }
+        .accordion{
+           
+             h6{ font-size: .95em;
+              font-weight: 900;
+              color: grey;}
+
+            ul{ 
+              list-style-type: disc;
+              font-size: .9em;
+
+              }
+          }
+          h5, .title{ font-size: 1em;
+            font-weight: 900;
+            color: $blue;}
+          ul{
+            list-style: none;
+            font-size: .9em;
+
+            li{
+              line-height: 1.4em;
+              margin-bottom: .7em;
+
+            }
+          }
+    }
+    table.dimensions{
+      border: 1px solid $grey;
+      width: 100%;
+      thead{ background-color: scale-color($blue, $lightness: 40%);font-weight:900;
+          td{padding: .5em;}
+      }
+      tbody{}
+      td{}
+      .odd{background-color: scale-color($grey, $lightness: 40%);}
+    }
+
+}
+
+#tumblelog{
+  .item a {
+    &:hover .panel{
+    border-top-color: $red;
+    background-color: scale-color($blue, $lightness:80%);
+    }
+  }
+
+}
+div.orbit-wrapper div.slider-nav span {
+top: 75%;
+}
+
+.toplink{
+  display: block;
+  height: 30px;
+  vertical-align: middle;
+  text-align: right;
+  .icon{
+    margin-top: -5px;
+    @include border-top-left-radius(5px);
+      @include border-top-right-radius(5px);
+      @include border-bottom-left-radius(5px);
+      @include border-bottom-right-radius(5px);
+      background-color:rgba( $blue , .8);
+  }
+  &:hover .icon{
+      background-color:rgba( $blue , 1);
+  };
+}
+.icon{
+    margin: 0 10px;
+    width:30px;
+    height: 30px;
+    display: inline-block;
+    background-color: #77f;
+    float: right;
+    text-align: left;
+    text-indent: -3000px;
+    @extend .my-icons-up-arrow;}
+
+.clear{clear: both}
 

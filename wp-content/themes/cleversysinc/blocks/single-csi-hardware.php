@@ -39,9 +39,12 @@
 								<?php the_content();
 								 $postID = get_the_ID();?>
                             </div>
-	                     
+	                       
                        		<? $field = get_field("dimenstions");
-                       		    if( $field != false && count( $field) != 0){
+				print_r( count($field ) );
+				var_dump( $field );
+				echo $field ;
+                       		if( $field != false && count( $field) != 0){
                        			$bool = true;
                        			$items = "<h4>Dimensions</h4>";
                        			$items .= "<table cellspacing='0' cellpadding='0' class='dimensions'><thead><td>item</td><td>width</td><td>length</td><td>height</td><td>animal</td></thead><tbody>";

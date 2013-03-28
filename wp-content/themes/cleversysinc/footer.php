@@ -1,14 +1,14 @@
 <footer  role="contentinfo">
 			
 <div class="row">
-	<div class="two columns">
+	<div class="three columns">
 		<h5>CleverSys Inc</h5>
 		<nav>
-			<?php  wp_nav_menu( array( 'menu' => 'main_nav', 'menu_class' => 'hide-for-small') ); ?>
+			<?php  wp_nav_menu( array( 'menu' => 'footer_nav', 'menu_class' => 'hide-for-small') ); ?>
 			
 		</nav>
 	</div>
-<div class="column five">
+<div class="column four">
 	<div class="panel callout column twelve round">
 		<h5>Support &amp; Sales</h5>
 		<p>We want to make your experiance with us as easy as possible. So please reach out if you have any questions</p>

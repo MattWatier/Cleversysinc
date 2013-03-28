@@ -1,10 +1,16 @@
 <?php 
 	$field  = get_field('extra_photos');
-	if($field != ""){
-		$items ='<div><h5 class="title">Images</h5><ul class="block-grid three-up" data-clearing>';
+	if(count($field) != 0 && $field != false){
+		$repeated = false;
+		$items ='<div><h5 class="title">Images</h5>';
 		foreach ($field as $image) {
 			$image = $image["image"];
-			$items .= '<li><a href="'.$image["sizes"]["wpf-featured"].'"><img src="'.$image["sizes"]["thumbnail"].'" data-caption="'.$image["caption"].'"></a></li>';
+			if( $repeated == false ){ 
+				$items  .= '<a href="'.$image["sizes"]["large"].'"><img style="margin:0 auto 15px; display: block;" alt="bones-thumb-300" src="'.$image["sizes"]["medium"].'" data-caption="'.$image["caption"].'"></a><ul class="block-grid four-up" >';
+			 }else{ 
+				$items .= '<li style="height:80px;overflow: hidden;"><a href="'.$image["sizes"]["large"].'"><img src="'.$image["sizes"]["large"].'" data-caption="'.$image["caption"].'"></a></li>';
+			}
+			$repeated = true;
 		}
 		$items .= "</ul></div>";
 		echo $items;
